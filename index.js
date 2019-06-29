@@ -4,13 +4,18 @@ var Quiz = require('./quiz');
 //Quiz webapp
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 // parse command line arguments and route to appropriate action
 var args = parseArgs(process.argv.slice(2));
 
 
 if(args._[0] === "load"){
-    LoadQuestions.load(args.question);
+    LoadQuestions.load(args.type);
 }
 
 if(args._[0] === "quiz"){
@@ -32,7 +37,9 @@ function startQuiz(){
     })
 
     app.post('/answer',function(req,res){
-        //TODO - send an answer, check for correctness
+        Quiz.checkAnswer(req.body,function(result){
+            res.send(result);
+        })
     })
 
     app.post('/new',function(req,res){

@@ -1,0 +1,1402 @@
+{
+    "examRole": "DEVELOPER",
+    "displayName": " MongoDB Certified Developer Associate - PRACTICE EXAM",
+    "studentExamDates": [
+        {
+            "id": "5d17842b16d2372ca0af3563",
+            "submitDate": "2019-06-29T15:30:55.829000Z"
+        },
+        {
+            "id": "5d1783f1eb88831b1eb5d7c9",
+            "submitDate": "2019-06-29T15:29:57.448000Z"
+        },
+        {
+            "id": "5d177be2eb88831b1eb5d788",
+            "submitDate": "2019-06-29T15:28:16.536000Z"
+        }
+    ],
+    "studentExam": {
+        "id": "5d17842b16d2372ca0af3563",
+        "userId": 703428,
+        "score": 0,
+        "total": 43,
+        "sections": [
+            {
+                "id": "5bb430af0b09f22b029a00d7",
+                "name": "Philosophy & Features",
+                "total": 4,
+                "problems": [
+                    {
+                        "id": "5babd6cd0b09f22b029a0039",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which writes are atomic in MongoDB 4.0? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "An update to a single document in a replica set",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "An update to multiple documents in a replica set using transactions",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "An update to a single document in a sharded cluster",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "An update to multiple documents in a sharded cluster",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><em>MongoDB 4.0</em> introduced updates to multiple documents in a replica set through <em>transactions</em>.</p>\n\n<p>In <em>MongoDB 3.6</em>, updates to single documents in replica sets or sharded clusters were atomic.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/write-operations-atomicity/\" target=\"_blank\">Atomicity and Transactions</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5babd8680b09f22b029a003f",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following are valid types in BSON? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Int64",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "ObjectId",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Decimal128",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>These are all valid BSON types.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/bson-types/\">BSON Types</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5babd7e40b09f22b0199ff88",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>In order to ensure that you can maintain high availability in the face of server failure, you should use which of the following MongoDB feature?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Replication",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Sharding",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Proper storage engine",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Proper defined user roles",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Indexes on all of the documents",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Replication provides redundancy and increases data availability. With multiple copies of data on different database servers, replication provides a level of fault tolerance against the loss of a single database server. </p>\n\n<p>If a member of the replica set becomes unavailable due to maintenance or a hardware crash, the other members will still be able to provide the applications access to the documents.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/replication/#redundancy-and-data-availability\" target=\"_blank\">Redundancy and Data Availability</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babd6440b09f22b029a0035",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Why does MongoDB use BSON rather than JSON? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "BSON includes metadata to describe a document/object",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "BSON supports more data types than JSON",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "BSON is more human readable than JSON",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>BSON extends the JSON model to provide additional data types, ordered fields, and to be efficient for encoding and decoding within different languages.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/reference/mongodb-extended-json/index.html\" target=\"_blank\">MongoDB Extended JSON</a></li>\n</ul>"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00d8",
+                "name": "CRUD",
+                "total": 7,
+                "problems": [
+                    {
+                        "id": "5babc7060b09f22b0199ff56",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Consider the following example document from the <em>sample</em> collection. All documents in this collection have the same schema. \n<pre>\n{\n    \"_id\" : 3, \n    \"a\" : 7,\n    \"b\" : 4\n}\n</pre>\n\nWhich of the following queries will replace this with the document, \n\n<pre>\n{\n    \"_id\" : 7, \n    \"c\" : 4\n}\n</pre>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.sample.replaceOne( { \"_id\" : 3 } , { \"_id\" : 7 , \"c\" : 4 } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.updateOne( { \"_id\" : 3 } , { \"$set\" : { \"_id\" : 7 , \"c\" : 4 } } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.updateOne( { \"_id\" : 3 } , { \"_id\" : 7 , \"c\" : 4 , { \"$unset\" : [ \"a\" , \"b\" ] } } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.updateOne( { \"_id\" : 3 } , { \"_id\" : 7 , \"c\" : 4 })",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "This operation cannot be done with a single query.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is that this operation cannot be done in a single query.</p>\n\n<p>To understand why, recall that the <code>_id</code> field of a document is <em>immutable</em>.</p>\n\n<p>In fact, trying this operation with:\n<pre>updateOne({_id: 3}, {$set: { _id: 7, c: 4 }, $unset: { a: \"\", b: \"\" }})</pre>\nproduces the following error:</p>\n<pre>\"Performing an update on the path '_id' would modify the immutable field '_id'\"</pre>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/document/\" target=\"_blank\">Documents in MongoDB</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babc7d30b09f22b0199ff58",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>\nWhich of the documents below would be modified by the following update? Assume all documents are in the \"people\" collection. Check all that apply.\n</p>\n<pre>\n> db.people.updateMany( { \"city\" : \"Seattle\", \"state\" : \"WA\" }, { \"$addToSet\" : { \"likes\" : \"forest\" } } )\n</pre>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "{ \"_id\" : ObjectId(\"57fd48257268886f789b33ff\"), \"firstName\" : \"Arthur\", \"lastName\" : \"Aaronson\", \"state\" : \"WA\", \"city\" : \"Seattle\", \"likes\" : [ \"dogs\", \"cats\", \"hiking\" ] }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : ObjectId(\"57fd48257268886f789b3400\"), \"firstName\" : \"Beth\", \"lastName\" : \"Barnes\", \"state\" : \"WA\", \"city\" : \"Richland\", \"likes\" : [ \"forest\", \"desert\" ] }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : ObjectId(\"57fd48257268886f789b3401\"), \"firstName\" : \"Charlie\", \"lastName\" : \"Carlson\", \"state\" : \"CA\", \"city\" : \"San Diego\", \"likes\" : [ \"desert\", \"beach\" ] }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : ObjectId(\"57fd48257268886f789b3402\"), \"firstName\" : \"Dawn\", \"lastName\" : \"Davis\", \"state\" : \"WA\", \"city\" : \"Seattle\", \"likes\" : [ \"forest\", \"mountains\", \"hiking\" ] }",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Two documents satisfy the following criteria:</p>\n<pre>\n{ \"city\" : \"Seattle\", \"state\" : \"WA\" }\n</pre>\n\n<p>Out of these two documents, the document with <code>_id:ObjectId(\"57fd48257268886f789b3402\")</code> already contains <code>forest</code> in the <code>likes</code> array and therefore, <code>$addToSet</code> is not going to add anything to this document. </p>\n\n<p>The document for <code>_id:ObjectId(\"57fd48257268886f789b33ff\")</code> is the only one that will be updated since it meets both criteria, and <code>forest</code> is not in the <code>likes</code> array.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/update/addToSet/\" target=\"_blank\">$addToSet</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babc7ea0b09f22b0299fffb",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>\nWhich of the documents below will be retrieved by the following query? Assume the documents are stored in a collection called \"sample\". Check all that apply. \n</p>\n<pre>\ndb.sample.find( { \"$or\" : [ { \"a\" : { \"$in\" : [ 3, 10] } }, { \"b\" : { \"$lt\" : 2 } } ] } )\n</pre>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "{ \"_id\" : 1, \"a\" : 0, \"c\" : 0, \"b\" : 2 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 2, \"a\" : 2, \"c\" : 0, \"b\" : 1 }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 3, \"a\" : 4, \"c\" : 0, \"b\" : 14 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 4, \"a\" : 5, \"c\" : 0, \"b\" : 17 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 5, \"a\" : 3, \"c\" : 0, \"b\" : 12 }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 6, \"a\" : 1, \"c\" : 1, \"b\" : 5 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 7, \"a\" : 8, \"c\" : 1, \"b\" : 7 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 8, \"a\" : 11, \"c\" : 1, \"b\" : 0 }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 9, \"a\" : 17, \"c\" : 1, \"b\" : 1 }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ \"_id\" : 10, \"a\" : 3, \"c\" : 1, \"b\" : 1 }",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <code>$or</code> operator means that any document that satisfies one of the conditions will be retrieved.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/query/or\" target=\"_blank\">$or operator</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babc6440b09f22b0199ff54",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Which of the following queries on the \"team\" collection will return only the first five elements of the array in the \"scores\" field?</p>\n<p>Example document (as it exists in the collection):</p>\n<pre class=\"prettyprint\">\n> db.team.find()\n{ \"_id\" : 12, scores : [ 3, 5, 7, 2, 1, -4, 3, 12 ] }\n</pre>\n<p>Document you want returned by your query:</p>\n<pre class=\"prettyprint\">\n{ \"_id\" : 12, \"scores\" : [ 3, 5, 7, 2, 1 ] }\n</pre>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.team.find( { } , { scores : [ 0, 1, 2, 3, 4, 5 ] } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.team.find( { } , { scores : [ 0 , 5 ] } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.team.find( { } , { scores : { $slice : [ 0 , 5 ] } } ) ",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.team.find( { } , { scores : { $substr[ 0 , 5 ] } } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.team.find( { scores : [ 0 , 5 ] } )",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Only the query <pre>db.team.find( { } , { scores : { $slice : [ 0 , 5 ] } } )</pre> will return the desired results.</p>\n\n<p>The <code>$slice</code> projection operator is used to control how many elements of an array will be returned after fetching it.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/projection/slice/index.html\" target=\"_blank\">$slice (projection)</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babc7f70b09f22b0199ff5a",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>On which of the following CRUD operations can you specify a write concern? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.collection.insertOne()",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.collection.find()",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.collection.updateMany()",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><em>write concerns</em> apply to write operations. <code>insertOne</code> and <code>updateMany</code> are write operations.</p>\n\n<p><code>find</code> is a read operation. Read operations can be influenced by <em>read concerns</em> or <em>read preferences</em>.</p>\n\n<p>To learn more, visit the following MongoDB Documentation pages:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/replica-set-write-concern/\" target=\"_blank\">Write Concern for Replica Sets</a></li>\n<li><a href=\"https://docs.mongodb.com/manual/reference/write-concern/\" target=\"_blank\">Write Concern</a></li></ul>\n"
+                    },
+                    {
+                        "id": "5babc5b20b09f22b0299fff3",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You perform the following query on the sayings collection, which has the index <code>{ quote : \u201ctext\u201d }</code>:</p>\n<p><pre class=\"prettyprint\">\ndb.sayings.find( { $text : { $search : \"fact find\" } } )\n</pre></p>\n<p>Assuming the following documents are in the collection, which ones will the query return? Check all that apply.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "{ _id : 1, quote : \u201cThat\u2019s a fact, Jack.\u201d } \n",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ _id : 2, quote : \u201cFind out if that fact is correct.\u201d }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ _id : 3, quote : \u201cNobody will ever catch me.\u201d }",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Because the text \"Nobody will ever catch me.\" contains neither \"fact\" nor \"find\" it won't be included in the results.</p>\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/index-text/\" target=\"_blank\">Text Indexes</a></li>\n</ul>"
+                    },
+                    {
+                        "id": "5baaa9490b09f22b0299ffa3",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>You perform the following operation in the shell:</p>\n<pre>\ndb.foo.insertOne( { } );\n</pre>\n<p>What gets inserted?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "An empty document",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "A document with an _id assigned to be an ObjectId",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "A document that matches the collection's existing schema, but with null fields",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "No document will be inserted; an error will be raised",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "A document will be inserted with the same _id as the last document inserted",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>In MongoDB, each document stored in a collection requires a unique <code>_id</code> field that acts as a <em>primary key</em>. If an inserted document omits the <code>_id</code> field, the MongoDB driver automatically generates an <code>ObjectId</code> for the <code>_id</code> field.</p>\n\n<p>In this question, a document with an <code>_id</code> field is inserted.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/tutorial/insert-documents/#insert-id-field\" target=\"_blank\">Insert Documents</a>\n</li>\n</ul>"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00d9",
+                "name": "Data Modeling",
+                "total": 1,
+                "problems": [
+                    {
+                        "id": "5bb406690b09f22b029a00ad",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following are good reasons to denormalize and create copies of your data in different collections? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "When you want to optimize for your most common read use case(s).",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "There is never a good reason to denormalize.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "To avoid having to join data in the application layer.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>If one of the main queries of the system is pulling related information from different collections, it usually gives better performance to group those information in a single document.</p>\n\n<p>Keeping the information together will remove the need to do the corresponding joins in the application. The single document may also be a better match to the representation of that object in the application.</p>\n\n<p>If you use MongoDB with a direct mapping of each collection to a table in the Relational model, you are not making use of some benefits brought by the document model. So, yes using a denormalized model is encouraged.</p>\n\n<p>As for duplicating information in different collections (think of an address in an order for example), this is perfectly acceptable if you need to do it to get good performance.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/data-model-design/\" target=\"_blank\">Data Model Design</a>\n</li>\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00da",
+                "name": "Indexes and Performance",
+                "total": 13,
+                "problems": [
+                    {
+                        "id": "5bb406170b09f22b029a00ab",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Which of the following is <strong>not</strong> a feature of the WiredTiger storage engine component in MongoDB?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Compression of data files",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Index prefix compression",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Document level concurrency",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Replication",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "A dedicated cache of RAM",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><em>Replication</em> is a feature handled at a higher level in the <em>mongod</em> process. A storage engine has the mission to store and retrieve documents from cache and memory. <em>Replication</em>, <em>Sharding</em>, processing of <em>MongoDB Query Language</em> queries and more, are all done in higher layers in the <em>mongod</em> process.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/wiredtiger/\" target=\"_blank\">The WiredTiger Storage Engine</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb4024a0b09f22b029a00a9",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>In MongoDB, the WiredTiger storage engine provides concurrency at what level?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Server-level concurrency",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Database level concurrency",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Collection level concurrency",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Document level concurrency",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Field level concurrency",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <em>WiredTiger</em> storage engine supports document-level concurrency, allowing multiple documents from the same collection to be written to, simultaneously.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/wiredtiger/#document-level-concurrency\" target=\"_blank\">WiredTiger Concurrency</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb40ef40b09f22b0199ffdc",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following commands are correct for exporting data into a CSV file format from a MongoDB server?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<pre>mongodump --host localhost:27017 -d catalog -c shoes > shoes.csv</pre>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre>mongoexport --host localhost:27017 -d catalog -c shoes --type=csv -f fields -o shoes.csv</pre>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre>mongoexport --host localhost:27017 -d catalog -c shoes -o shoes.csv</pre>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><code>mongodump</code> will export the documents in <em>BSON</em>. It is also the preferred way to transfer documents from one instance of <em>MongoDB</em> to another instance.</p>\n<p>However, if you need to export to a <em>CSV</em> file, you would use <code>mongoexport</code>.</p>\n<p>The correct answer is the one that includes <code>--type=csv</code>, which tells which format we want <code>mongoexport</code> to use for the output. The default type is <em>JSON</em>.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/program/mongoexport/#cmdoption-mongoexport-type\" target=\"_blank\">mongoexport supported types</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb42d2b0b09f22b029a00ce",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Adding an index on { a : 1 } can potentially <em>decrease</em> the speed of which of the following operations? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.collection.find( { a : 232 } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.collection.updateOne( { b : 456 }, { $inc : { a : 1 } } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.collection.insertOne( { a : 341 } )",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The operators <code>updateOne</code> and <code>insertOne</code> are correct because adding indexes does impact write performance.</p>\n<p>Remember, write operations that modify an indexed field may require MongoDB to update the indexes associated with the document.</p>\n<p>That said, not having the appropriate index for a given query will produce a <em>collection scan</em> on the collection, and those are undesirable.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/data-model-operations/#indexes\" target=\"_blank\">Indexes</a></li>\n\n<!--\n<li><a href=\"https://github.com/10gen/university-courses/blob/950a7505abec39333de2cbf1f8d27dbfa2f45815/src/lessons/m201/performance__insert_performance.rst\" target=\"_blank\">Lesson</a></li>\n-->\n</ul>"
+                    },
+                    {
+                        "id": "5babd5530b09f22b029a0033",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following must be true for a query to be a covered query? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "All fields used in the selection filter of the query must be in the index that the query uses",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "All fields returned in the results must be in the index that the query uses",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "All fields returned in the results must be fields in the selection filter of the query",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>All fields used in the selection filter of the query must be in the index, so the system can find the documents that satisfy the selection filter without having to retrieve the document from the collection.</p>\n\n<p>All fields returned in the results must be in the index, so again there is no need to retrieve the full document. A common mistake is not to provide a projection that filters out the field <code>_id</code>, which is returned by default. If the <code>_id</code> field is not a field in the index definition, it is not available, and the query system will need to fetch the full document to retrieve the value.</p>\n\n<p>On the other hand, it is OK to ask for more fields than the ones provided in the selection filter, as long as those are in the index values, the system has all the information needed to avoid fetching the full document from the collection.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/query-optimization/#covered-query\" target=\"_blank\">Covered Query</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babd07d0b09f22b029a001f",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have the following indexes on the <em>things</em> collection:</p>\n<pre class='prettyprint'>\n[\n\t{\n\t\t\"v\" : 1,\n\t\t\"key\" : {\n\t\t\t\"_id\" : 1\n\t\t},\n\t\t\"name\" : \"_id_\",\n\t\t\"ns\" : \"test.things\"\n\t},\n\t{\n\t\t\"v\" : 1,\n\t\t\"key\" : {\n\t\t\t\"a\" : 1\n\t\t},\n\t\t\"name\" : \"a_1\",\n\t\t\"ns\" : \"test.things\"\n\t},\n\t{\n\t\t\"v\" : 1,\n\t\t\"key\" : {\n\t\t\t\"c\" : 1,\n\t\t\t\"b\" : 1,\n\t\t\t\"a\" : 1\n\t\t},\n\t\t\"name\" : \"c_1_b_1_a_1\",\n\t\t\"ns\" : \"test.things\"\n\t}\n]\n</pre>\n<p>Which of the following queries will require that you load every document into RAM in order to fulfill the query? Assume that no data is being written during the query. Check all that apply.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.things.find( { b : 1 } ).sort( { c : 1, a : 1 } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.things.find( { c : 1 } ).sort( { a : 1, b : 1 } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.things.find( { a : 1 } ).sort( { b : 1, c : 1 } )",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The query <pre>db.things.find( { b: 1} ).sort( {c: 1, a: 1} )</pre> will require every document be loaded into RAM in order to fulfill the query. This is because the initial match on the <code>b</code> key does not use any existing index or index prefix.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/index-compound/#prefixes\" target=\"_blank\">Compound Indexes - Prefixes</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb408e10b09f22b0199ffd2",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have created the following index on the foo collection:</p>\n<pre>\n> db.foo.createIndex( { a : 1, b : -1, c : -1, d: 1 } )\n</pre>\n<p>Which of the following queries will be able to fulfill the query without an in-memory sort (i.e., it's able to use the index to sort)? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.foo.find( { a : { $gt : 100 } } ).sort( { c : -1 } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.foo.find( { a : 100 } ).sort( { b : 1, c : 1 } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.foo.find( { a : 200, b : { $lt : 100 } } ).sort( { b : 1 } )",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Recall that compound indexes should be built in the order of <em>equality, range, sort</em> for common operational query patterns.</p>\n<p>Also recall that as long as the query uses all keys of a compound index or a combination of index prefixes, it will make use of the existing index.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/index-compound/\" target=\"_blank\">Compound Indexes</a>\n</li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/58ab5627d280e42675e8b835/tab/vertical_2184e58c07e2\">Lesson on compound indexes, part 1</a></li>\n<li><a href=\"https://university.mongodb.com/mercury/lesson/58ab5627d280e426768b0994/tab/vertical_4cfbed8c377b\">Lesson on compound indexes, part 2</a></li>\n-->\n</ul>\n"
+                    },
+                    {
+                        "id": "5babcee80b09f22b029a0017",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have the following indexes on your collection:</p>\n<pre>\n[\n\t{\n\t\t\"v\" : 1,\n\t\t\"key\" : {\n\t\t\t\"_id\" : 1\n\t\t},\n\t\t\"name\" : \"_id_\",\n\t\t\"ns\" : \"test.sample\"\n\t},\n\t{\n\t\t\"v\" : 1,\n\t\t\"key\" : {\n\t\t\t\"name\" : 1,\n\t\t\t\"date\" : 1,\n\t\t\t\"phone\" : 1\n\t\t},\n\t\t\"name\" : \"name_1_date_1_phone_1\",\n\t\t\"ns\" : \"test.sample\"\n\t}\n]\n</pre>\n\n<p>Which of the following queries will use an index? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.sample.find( { _id : 22, date: ISODate(\"2012-07-04\" } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.find( { date: ISODate(\"2011-07-04\"), name : \"Alice\" } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.find( { title : \"DBA\" } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.find( { phone : \"123-456-7890\"), info : \"201-555-5792\" } )",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>There are 2 indexes:</p>\n\n<pre>\n{ _id: 1 }\n{ \"name\" : 1, \"date\" : 1, \"phone\" : 1 }\n</pre>\n\n<p>\nThe order of the fields in the index is important, however, the order of the fields in the query are not significant as the query planner will \"reorder\" the query terms to match a prefix of, or the full compound index. \n</p>\n\n<p>\nThe query on <code>_id</code> will use the first index. Because <code>_id</code> is guaranteed to be unique, it's possible for the planner to make this optimization. To be sure, there will still be a <code>FETCH</code> stage to get the document and ensure the date predicate is fulfilled.\n</p>\n\n<p>\nThe query on <code>date, name</code> will also use an index, the <code>name_1_date_1_phone_1</code> index, because a prefix is specified (<code>name, date</code>).</p>\n\n<p>The query on <code>title</code> is using a field for which there is no index.</p>\n\n<p>\nAs for the query on <code>phone</code> and <code>info</code>, <code>phone</code> is indexed, however as the third member of the compound index so won't be used.\n</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/query-optimization/\" target=\"_blank\">Query Optimization</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5babcc880b09f22b0199ff6a",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Given the following example document:</p>\n<pre>\n{\n  \"_id\": ObjectId(\"5360c0a0a655a60674680bbe\"),\n\n  \"user\": {\n    \"login\": \"ir0n\",\n    \"description\": \"Made of metal\"\n    \"date\": ISODate(\"2014-04-30T09:16:45.836Z\"),\n  }\n}\n</pre>\nand the following index:\n<pre>\ndb.users.createIndex( { \"user.login\": 1, \"user.date\": -1 }, \"myIndex\" )\n</pre>\nWhen performing the following query:\n<pre>\ndb.users.find( { \"user.login\": /^ir.*/ }, { \"user\":1, \"_id\":0 } ).sort( { \"user.date\":1 } )\n</pre>\n\n<p>Which of the following statements correctly describes how MongoDB will handle the query?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "As a covered query using \"myIndex\" because we are filtering out \"_id\" and only returning \"user.login\"",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "As an index scan that uses \"myIndex\" because field \"user.login\" is indexed ",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "As an optimized sort query (no explicit sort stage) using \"myIndex\" because we are sorting on an indexed field",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "MongoDB will need to do a table/collection scan to find matching documents",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "None of the above",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Because the field <code>user.login</code> is indexed and the regex <em>beginning of line</em> operator is being used (<code>^</code>), the index <code>myIndex</code> will be used for this query.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul><li><a href=\"https://docs.mongodb.com/manual/reference/operator/query/regex/\" target=\"_blank\">Evaluation Query Operators - $regex</a></li></ul>"
+                    },
+                    {
+                        "id": "5bb409200b09f22b0199ffd4",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following statements are true of unique indexes? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The only possible unique index is the \"_id\" field. \n",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The \"unique\" constraint on an index ensures that no two (or more) documents can share a value for that field in a collection ",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Hashed indexes cannot be unique.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Unique indexes have certain properties and restrictions that you should be familiar with.</p>\n<p>For example, they ensure that no documents have the same data at the same key that carries a unique index, and you may not specify a unique constraint on a field that is specified as a hashed index.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/index-unique/\" target=\"_blank\">Unique Indexes</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb42ddd0b09f22b0199ffe0",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have the following index on the <i>toys</i> collection:</p>\n<pre>\n{ \n    \"manufacturer\" : 1,\n    \"name\" : 1,\n    \"date\" : -1\n}\n</pre>\n<p>Which of the following queries are able to use the index? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.toys.find( { manufacturer : \"Matteo\", name : \"Barbara\", date : \"2018-07-02\" } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.toys.find( { name : \"Big Rig Truck\", date : \"2018-02-01\", manufacturer : \"Tanko\" } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.toys.find( { date : \"2018-03-01\", manufacturer : \"Loggo\", name : \"Brick Set\" } )",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>All answer choices are correct!</p>\n<p>Consider just the first choice. Any document that could match <em>\"manufacturer is Matteo AND name is Barbara AND date is 2018-07-02</em> would have to match <em>date is 2018-07-02 AND, name is Barbara, and manufacturer is Matteo</em>.\n</p>\n<p> Because of this fact, the optimizer is able to rearrange the the search terms, using the existing index for each query.</p>\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/index-compound/#prefixes\" target=\"_blank\">Prefixes</a></li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb409860b09f22b0199ffd8",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>\nSuppose you have a collection \"sample\" with an index created as follows.\n</p>\n<pre>\ndb.sample.createIndex( { \"foo\" : -1 } )\n</pre>\n<p>\nFor which of the following queries can MongoDB efficiently look at only a subset of the index entries, rather than all of the index entries? Check all that apply.\n</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.sample.find( { \"foo\" : /a.*b/ } )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.find( { \"foo\" : /^c.*d/ } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.sample.find( { \"foo\" : /^e.*f/ } )",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>By specifying the \"beginning of line\" regex operation, you constrain the query and MongoDB can efficiently navigate the index to the correct location.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/reference/operator/query/regex/index.html#index-use\" target=\"_blank\">Index Use</a></li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb409480b09f22b0199ffd6",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following is true of covered queries? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "MongoDB can satisfy covered queries using only index keys.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "MongoDB can satisfy covered queries efficiently without the use of an index.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Covered queries ordinarily have slower response times than queries that are not covered.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Covered queries are the best queries!</p>\n<p>The underlying index supports the entire query, so no document information is required to be fetched from disk. With a covered query, you are servicing the operation entirely from the index, which is usually faster than examining each document.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/query-optimization/index.html#covered-query\" target=\"_blank\">Covered Query</a></li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/58b4c2b4d280e431d9215f3b/tab/vertical_c31c6aad62ae\">Lesson</a></li>\n-->\n</ul>"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00db",
+                "name": "Aggregation",
+                "total": 4,
+                "problems": [
+                    {
+                        "id": "5baa73340b09f22b0199ff2e",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Suppose you have the following collection with only 2 documents:</p>\n<pre>\n> db.people.find()\n{ \"_id\" : \"apples\", \"traits\" : [ \"sweet\" , \"crispy\" ] }\n{ \"_id\" : \"oranges\", \"traits\" : [ \"sweet\" , \"orange\" , \"juicy\" ] }\n</pre>\n<p>You run an aggregation query and begin with { $unwind : \"$traits\" } . </p>\n<p>How many documents will you have in the pipeline after the $unwind stage?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "1",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "2",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "3",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "4",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "5",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><code>$unwind</code> takes a field (array) as its argument. It then replaces the original document by N documents, one for each value in the array. So taking the \"apple\" document, you would get 2 resulting documents:</p>\n\n<pre>\n{ \"_id\" : \"apples\", \"traits\" : \"sweet\" }\n{ \"_id\" : \"apples\", \"traits\" : \"crispy\" }\n</pre>\n\n<p>Similarly, the \"oranges\" document would unwind into 3 documents, for a total of 5 documents.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/unwind\" target=\"_blank\">$unwind (aggregation)</a>\n</li>\n</ul>\n\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/59e0d73255593f47d22c64cb/tab/59e0d73255593f47d22c64d2\">lesson on the <code>$unwind</code> stage</a></li>\n-->\n"
+                    },
+                    {
+                        "id": "5baa6fee0b09f22b0199ff2c",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Suppose you have the following collection in MongoDB. The collection is named <em>alpha</em>.</p>\n<p><pre>\n{\"_id\" : 1, \"region\" : \"NW1\", \"leads\" : 1, \"email\" : \"mlangley@co1.com\"}\n{\"_id\" : 2, \"region\" : \"NW1\", \"leads\" : 1, \"email\" : \"jpicoult@co4.com\"}\n{\"_id\" : 3, \"region\" : \"NW1\", \"leads\" : 2, \"email\" : \"zzz@company2.com\"}\n{\"_id\" : 4, \"region\" : \"SE1\", \"leads\" : 8, \"email\" : \"mary@hssu.edu\" }\n{\"_id\" : 5, \"region\" : \"SE2\", \"leads\" : 4, \"email\" : \"janet@col.edu\"}\n{\"_id\" : 6, \"region\" : \"SE2\", \"leads\" : 2, \"email\" : \"bill@uni.edu\"}\n{\"_id\" : 7, \"region\" : \"SE2\", \"leads\" : 4, \"email\" : \"iii@company1.com\"}\n{\"_id\" : 8, \"region\" : \"SW1\", \"leads\" : 1, \"email\" : \"phil@co3.com\"}\n{\"_id\" : 9, \"region\" : \"SW1\", \"leads\" : 2, \"email\" : \"thomas@company.com\"}\n{\"_id\" : 10, \"region\" : \"SW2\", \"leads\" : 2, \"email\" : \"sjohnson@uchi.edu\"}\n{\"_id\" : 11, \"region\" : \"SW2\", \"leads\" : 5, \"email\" : \"tsamuel@someco.com\"}\n</pre></p>\n\n<p>How many documents will be returned in the result set in response to the following aggregation query?</p>\n\n<p><pre>\ndb.alpha.aggregate( [\n                   { \"$group\" : { \"_id\" : \"$region\" , \n                                  \"count\" : { \"$sum\" : 1 } } } ,\n                   { \"$match\" : { \"count\" : { \"$gte\" : 3 } } } \n                  ] )\n</pre></p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "0",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "1",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "2",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "3",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "4",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p> The first stage, <code>$group</code>, groups by the <em>region</em> and uses the <code>$sum</code> accumulator expression to count the number of documents in each group. </p>\n\n<p> Next, these documents flow into the <code>$match</code> stage, where documents with a count that is less than 3 (3 out of the 5 groups) are filtered out, returning two documents. </p>\n\n<p>\n<pre>\n{ \"_id\" : \"SE2\", \"count\" : 3 }\n{ \"_id\" : \"NW1\", \"count\" : 3 }\n</pre>\n</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/group\" target=\"_blank\">$group (aggregation)</a>\n</li>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/match\" target=\"_blank\">$match (aggregation)</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb430db0b09f22b0199fff2",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which of the following statements are true about the <code>$match</code> pipeline stage? Check all that apply.",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "You should use it as early as possible in the pipeline.\n\n",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "It can be used as many times as needed.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "It has a syntax similar to find() commands.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>You should use the <code>$match</code> stage as early as possible in your pipeline. The reason is that by filtering documents that are not part of the answer early will mean the rest of the pipeline will process less documents and will be faster.</p>\n\n<p>Most stages, except few exceptions, can be used many times in a pipeline.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/match\" target=\"_blank\">$match (aggregation)</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb430f30b09f22b0199fff4",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>The <i>users</i> collection contains the following documents:</p>\n<pre>\n> db.users.find()\n{ \"_id\" : 1, \"name\" : \"dave123\", \"q1\" : true, \"q2\" : true }\n{ \"_id\" : 2, \"name\" : \"dave2\", \"q1\" : false, \"q2\" : false }\n{ \"_id\" : 3, \"name\" : \"ahn\", \"q1\" : true, \"q2\" : true }\n{ \"_id\" : 4, \"name\" : \"li\", \"q1\" : true, \"q2\" : false }\n{ \"_id\" : 5, \"name\" : \"annT\", \"q1\" : false, \"q2\" : true }\n{ \"_id\" : 6, \"name\" : \"li\", \"q1\" : true, \"q2\" : true }\n{ \"_id\" : 7, \"name\" : \"ty\", \"q1\" : false, \"q2\" : true }\n</pre>\n<p>You perform the following query:</p>\n<pre>\ndb.users.aggregate( [ { $sample : { size : 3 } } ] )\n</pre>\n<p>Which of the following are possible outputs from the database? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<pre>\n{ \"_id\" : 7, \"name\" : \"ty\", \"q1\" : false, \"q2\" : true }\n{ \"_id\" : 2, \"name\" : \"dave2\", \"q1\" : false, \"q2\" : false }\n{ \"_id\" : 4, \"name\" : \"li\", \"q1\" : true, \"q2\" : false }\n</pre>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre>\n{ \"_id\" : 1, \"name\" : \"dave123\", \"q1\" : true, \"q2\" : true }\n{ \"_id\" : 2, \"name\" : \"dave2\", \"q1\" : false, \"q2\" : false }\n{ \"_id\" : 3, \"name\" : \"ahn\", \"q1\" : true, \"q2\" : true }\n</pre>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre>\n{ \"_id\" : 5, \"name\" : \"annT\", \"q1\" : false, \"q2\" : true }\n{ \"_id\" : 6, \"name\" : \"li\", \"q1\" : true, \"q2\" : true }\n{ \"_id\" : 7, \"name\" : \"ty\", \"q1\" : false, \"q2\" : true }\n</pre>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <code>$sample</code> stage in the <em>Aggregation Framework</em> returns a subset of documents in a random fashion. In the above pipeline, we ask the stage to return 3 documents, so the documents returned could be any document in any order.</p>\n\n<p>This <code>$sample</code> stage is useful when you want to test something against a large dataset, as processing all the documents would take too much time.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/sample\" target=\"_blank\">$sample (aggregation)</a>\n</li>\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00dc",
+                "name": "Replication",
+                "total": 5,
+                "problems": [
+                    {
+                        "id": "5bb3fbfb0b09f22b0199ffcc",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>The <i>people</i> collection contains the following documents:</p>\n<pre>\n{ \"_id\" : ObjectId(\"57fd59a2d630a0fd9685a148\"), \"firstName\" : \"Arthur\", \"lastName\" : \"Aaronson\", \"state\" : \"WA\", \"city\" : \"Seattle\", \"likes\" : [ \"dogs\", \"cats\" ] }\n{ \"_id\" : ObjectId(\"57fd59a2d630a0fd9685a149\"), \"firstName\" : \"Beth\", \"lastName\" : \"Barnes\", \"state\" : \"WA\", \"city\" : \"Richland\", \"likes\" : [ \"forest\", \"desert\" ] }\n{ \"_id\" : ObjectId(\"57fd59a2d630a0fd9685a14a\"), \"firstName\" : \"Charlie\", \"lastName\" : \"Carlson\", \"state\" : \"CA\", \"city\" : \"San Diego\", \"likes\" : [ \"desert\", \"beach\" ] }\n{ \"_id\" : ObjectId(\"57fd59a2d630a0fd9685a14b\"), \"firstName\" : \"Dawn\", \"lastName\" : \"Davis\", \"state\" : \"WA\", \"city\" : \"Seattle\", \"likes\" : [ \"forest\", \"mountains\" ] }\n</pre>\n<p>You perform the following query:</p>\n<pre>\ndb.people.deleteMany( { state : \"NB\" } ) \n</pre>\n<p>How many oplog entries are created as a result of this query?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "0",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "1",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "2",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "3",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "4",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <em>Oplog</em> collection only contains an entry for a given write query if the operation has modified a document.</p>\n\n<p>Because the <code>deleteMany</code> operation is not deleting any document, there will be no <em>Oplog</em> entry to record.</p>\n\n<!-- could not find a reference in docs, opened DOCS-12074 -->\n\n\n"
+                    },
+                    {
+                        "id": "5bb433910b09f22b0199fff9",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following describe the primary reasons MongoDB supports replication? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "To provide high availability",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "To enable horizontal scaling",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "To prevent downtime in case of a disaster at a data center",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><em>Horizontal scaling</em> is defined as adding more servers, while <em>vertical scaling</em> is defined as increasing the resources of a server. <em>Horizontal scaling</em> is achieved by <em>sharding</em>, not <em>replication</em></p>\n\n<p>A good practice when using <em>replication</em> is to have replicas in different geographical regions. If one region becomes unavailable due to a major failure in a data center or the network connection to it, the applications will continue to operate without downtime.</p>\n\n<p>Note that replication helps in case of physical disasters, but does not prevent against logical disasters like the deletion of a database. For that reason, <em>replication</em> does not replace <em>backups</em>.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/replication\" target=\"_blank\">Replication</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb3facb0b09f22b029a009f",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>What settings can be controlled by <code>rs.reconfig()</code>? Check all that apply.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Priority for each replica set member",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Which replica set members are hidden",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Which version of MongoDB each replica set member is running",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>You can not set the version of <em>MongoDB</em> a given replica is using. This would be a little difficult to control, as nodes may not have the desired version installed yet.</p>\n\n<p>The other options make more sense to be controlled in a global configuration, as you want to be able to change them from one location (the <em>Primary</em>), and have the changes being effective without having to restart the <em>mongod</em> processes.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/reference/method/rs.reconfig/\" target=\"_blank\">rs.reconfig()</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb3fe4d0b09f22b0199ffce",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>What is the principal advantage of having a delayed replica set member?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "It allows the load on the secondary servers to be more evenly spread.\n",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It allows you to perform queries against historical versions of the data.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It increases write speed to the primary.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It makes it easier to upgrade the system without downtime.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It provides a window of time to recover from an operator error.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>If you have a delayed member in your replica set, for example, a delay of one hour, it will take one hour before changes on the <em>Primary</em> are replicated to this member.</p>\n\n<p>If a user were to drop a collection or database on the <em>Primary</em>, you would have one hour to go to this delayed member to retrieve the destroyed data.</p>\n\n<p>You can also query older versions of your documents, however, you can't choose a historical version to retrieve as you only get the one that existed one hour ago.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/tutorial/configure-a-delayed-replica-set-member/\" target=\"_blank\">Configure a Delayed Replica Set Member</a>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb401bc0b09f22b029a00a7",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>\nWhich of the following is a correct definition for idempotence?\n</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Affecting the same fields in successive queries. e.g.,  db.collection.updateOne( { _id : 3 } , { $inc : { a : 7 , b : 6 } } ) and db.collection.updateOne( { _id : 3 } , { $inc : { a : 1 , b : 2 } } ) are <i>idempotent</i> with respect to one another",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "If an action may be performed multiple times and have the same effect as if it had been performed once, it is idempotent. For example, $set: {a: 3} is <i>idempotent</i>, but $inc: {a: 1} is not.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Having the property that order does not matter. I.e., if A and B are update operations, then they are <i>idempotent</i> if A(B(document)) = B(A(document))",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Requiring the same amount of data to be transferred makes two queries <i>idempotent</i> with respect to one another",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Setting an entire document's state with an update, rather than just modifying a subset in the argument of the update, is an <i>idempotent</i> operation.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The desire for the <em>Oplog</em> to be <em>idempotent</em> is to ensure that if the server needs to resume applying <em>Oplog</em> entries it will always get to the same end state, regardless if it reapplies some that entry already applied. For example, if the server crashes applying <em>oplog5</em> and it is difficult to identify if <em>oplog5</em> is applied, then idempotency let you restart at <em>oplog4</em> without issues.</p>\n\n<p>Another goal is to have the new state of the document be independent of a previous state. This means all operators like <code>$em</code>, which relies on the previous value to determine the new value, needs to be transformed to the actual values seen. For example, if an increment operation results in modifying a field from the value '4' to the value '5', the operation should be transformed to simply set '5' on that field. Replaying this operation many times always lead to the same result.</p>\n\n<p>To learn more, visit the following MongoDB Documentation pages:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/reference/glossary/#term-idempotent\" target=\"_blank\">Idempotency definition</a></li>\n<li><a href=\"https://docs.mongodb.com/manual/core/replica-set-oplog/\" target=\"_blank\">Replica Set Oplog</a></li>\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "5bb430af0b09f22b029a00dd",
+                "name": "Sharding",
+                "total": 9,
+                "problems": [
+                    {
+                        "id": "5bb40bc90b09f22b029a00ba",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>In a sharded collection, which of the following is true of the primary shard?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "It processes queries from the application layer and determines the location of this data in the sharded cluster.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It is a shard on which the primary for a replica set is found.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It holds the unsharded collections for the database.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "It is simply the first shard initialized in a sharded cluster.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It holds configuration information for the sharded cluster.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>For a given database in a cluster, not all collections may be sharded. As a matter of fact, you are likely to shard only the very large collections. For the ease of management and to provide features like <code>$lookup</code> across collections, it makes sense to group all non-sharded collections together, and this location is referred to as the <em>Primary Shard</em> for this given database. Other databases in the cluster are likely to have a different <em>Primary Shard</em> to level the space and load between the shards.</p>\n\n<p>As a note, the term <em>Primary</em> Shard is used here, so be careful not to confuse this notion with the <em>Primary</em> replica in a replica set.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/sharded-cluster-shards/#primary-shard\" target=\"_blank\">Primary Shard</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb40dab0b09f22b029a00c2",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Your top three queries for a collection consist of the following query patterns:</p>\n<pre>\n90% db.employees.find( { lastName : 1, firstName : 1, currentEmployee : 1, company : 1 }, { supervisor : 1, teamName : 1, position: 1, duties : 1, salary : 1 } )\n5% db.employees.updateOne( { employeeId: 1 }, { $set : { position : 1, teamName : 1, salary : 1, duties : 1 } } )\n1% db.employees.updateOne( { employeeId: 1 }, { $set : { currentEmployee : 1, hireDate: 1 } } )\n</pre>\n<p>Your system is outgrowing the servers you currently have it running on, and you\u2019d like to shard the collection. Which of the following shard keys will be most performant?</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "{ company : 1, lastName: 1 }",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ supervisor : 1, teamName : 1, position : 1, duties : 1, salary : 1 } ",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ employeeId : 1 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ currentEmployee : 1, hireDate : 1 }",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "{ currentEmployee : 1, company : 1 }",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Because the first query account for 90% of your read workload, it should be the one driving the selection of the shard key.</p>\n\n<p>Combination of fields from that query would make the best shard key. Out of the two solutions that use a subset of those fields, the one using <code>company</code> and <code>lastName</code> is preferred to <code>currentEmployee</code> and <code>company</code>, as the <code>currentEmployee</code> field is likely a boolean leading to few values, and potentially a lot of documents with the same values, resulting in jumbo chunks (chunks too big to be splitted).</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#choosing-a-shard-key\" target=\"_blank\">Picking a Shard Key</a>\n</li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/5aa325e996f30f818591a5a8/tab/5aa325ea96f30f818591a5a9\">lesson on the <em>$unwind</em> stage</a></li>\n-->\n</ul>\n\n"
+                    },
+                    {
+                        "id": "5bb40d140b09f22b029a00c0",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Suppose you have a sharded cluster with a status as follows:</p>\n<pre>\nmongos> sh.status()\n--- Sharding Status --- \n  sharding version: {\n        \"_id\" : 1,\n        \"version\" : 3,\n        \"minCompatibleVersion\" : 3,\n        \"currentVersion\" : 4,\n        \"clusterId\" : ObjectId(\"51de8630162b88d59cd7b006\")\n}\n  shards:\n        {  \"_id\" : \"shard0000\",  \"host\" : \"localhost:30000\" }\n        {  \"_id\" : \"shard0001\",  \"host\" : \"localhost:30001\" }\n        {  \"_id\" : \"shard0002\",  \"host\" : \"localhost:30002\" }\n        {  \"_id\" : \"shard0003\",  \"host\" : \"localhost:30003\" }\n        {  \"_id\" : \"shard0004\",  \"host\" : \"localhost:30004\" }\n        {  \"_id\" : \"shard0005\",  \"host\" : \"localhost:30005\" }\n        {  \"_id\" : \"shard0006\",  \"host\" : \"localhost:30006\" }\n        {  \"_id\" : \"shard0007\",  \"host\" : \"localhost:30007\" }\n  databases:\n        {  \"_id\" : \"admin\",  \"partitioned\" : false,  \"primary\" : \"config\" }\n        {  \"_id\" : \"test\",  \"partitioned\" : true,  \"primary\" : \"shard0001\" }\n                test.products\n                        shard key: { \"productId\" : 1 }\n                        chunks:\n                                shard0000        2\n                                shard0002        2\n                                shard0003        1\n                                shard0004        1\n                                shard0005        1\n                                shard0006        1\n                                shard0007        1\n                                shard0001        2\n                        { \"productId\" : { \"$minKey\" : 1 } } -->> { \"productId\" : 9294 } on : shard0000 { \"t\" : 2, \"i\" : 0 } \n                        { \"productId\" : 9294 } -->> { \"productId\" : 18684 } on : shard0002 { \"t\" : 3, \"i\" : 0 } \n                        { \"productId\" : 18684 } -->> { \"productId\" : 27851 } on : shard0003 { \"t\" : 4, \"i\" : 0 } \n                        { \"productId\" : 27851 } -->> { \"productId\" : 36852 } on : shard0004 { \"t\" : 5, \"i\" : 0 } \n                        { \"productId\" : 36852 } -->> { \"productId\" : 46047 } on : shard0005 { \"t\" : 6, \"i\" : 0 } \n                        { \"productId\" : 46047 } -->> { \"productId\" : 55450 } on : shard0006 { \"t\" : 7, \"i\" : 0 } \n                        { \"productId\" : 55450 } -->> { \"productId\" : 64644 } on : shard0007 { \"t\" : 8, \"i\" : 0 } \n                        { \"productId\" : 64644 } -->> { \"productId\" : 73769 } on : shard0000 { \"t\" : 9, \"i\" : 0 } \n                        { \"productId\" : 73769 } -->> { \"productId\" : 82950 } on : shard0002 { \"t\" : 10, \"i\" : 0 } \n                        { \"productId\" : 82950 } -->> { \"productId\" : 91983 } on : shard0001 { \"t\" : 10, \"i\" : 1 } \n                        { \"productId\" : 91983 } -->> { \"productId\" : { \"$maxKey\" : 1 } } on : shard0001 { \"t\" : 1, \"i\" : 10 }\n</pre>\n<p>Which shards would be involved in answering the following query:</p>\n<pre>\nuse test;\ndb.products.find({\"productId\" : {\"$gte\" : 20000, \"$lte\" : 40000}});\n</pre>\n<p>Check all that apply.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "shard0000",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0001",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0002",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0003",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0004",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0005",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0006",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard0007",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Any chunk that covers the values in the range of 20,000 to 40,000 can be accessed by the <code>find()</code> query. Looking at the provided output for <em>rs.status()</em>, we identify the chunks for this range as:</p>\n\n<pre>\n  { \"productId\" : 18684 } -->> { \"productId\" : 27851 } on : shard0003 { \"t\" : 4, \"i\" : 0 } \n  { \"productId\" : 27851 } -->> { \"productId\" : 36852 } on : shard0004 { \"t\" : 5, \"i\" : 0 } \n  { \"productId\" : 36852 } -->> { \"productId\" : 46047 } on : shard0005 { \"t\" : 6, \"i\" : 0 } \n</pre>\n\n<p>Those three chunks cover all values for 20,000 to 40,000. Because they are on three different shards, the query will have to be routed to those three shards, each shard returning the corresponding documents it has for the range.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/tutorial/insert-documents/#insert-id-field\" target=\"_blank\">Insert Documents</a></li>\n<!--\n<li><ahref=\"https://university.mongodb.com/mercury/lesson/5aa34ba4c76aaf0ebdea9a8d/tab/5aa34ba6c76aaf0ebdea9a8e\">Lesson on Shard Keys</a></li>\n-->\n</ul>\n\n"
+                    },
+                    {
+                        "id": "5bb40c120b09f22b029a00bc",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>In which of the following situations can we assume sharding will be an effective strategy?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "A single MongoDB instance cannot keep up with your application's write load and you have exhausted other options.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Your data set is too big to fit in a single MongoDB instance.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "You would like to improve read performance for your application.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The data set is taking too much time to backup and restore.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "All of the above",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The common thread in the above answer choices is a bottleneck on resources, or for \"taking too much time to backup and restore\" a function of your operational requirements. Breaking the dataset over shards will mean that each server will have more resources available to handle the subset of data it owns, and operations of moving data across machines for replication, backups, restores will also be faster</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/sharding/#advantages-of-sharding\" target=\"_blank\">Advantages of Sharding</a></li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/5aa3184f96f30f818591a598/tab/5aa3184f96f30f818591a599\">lesson on when to shard</a></li>\n-->\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb40b610b09f22b029a00b8",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>When a chunk is in flight from one shard to another during a migration process, where are reads to that chunk directed?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "To the shard from which it is being migrated",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "To both the shard from which it is being migrated and the shard to which it is being migrated",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "To the shard to which it is being migrated",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Documents in the chunk are locked during migration. Reads are queued.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "To the config server",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>When a chunk is in flight, reads and writes from the application can still access the documents in that chunk. Modifications on documents are propagated to the shard where it is migrated.</p>\n\n<p>Until the chunk is fully migrated, the shard (donor) that is sending it to another shard (receiver) is the only location where the all documents are present in their latest form. For that reason, the <em>donor</em> shard is processing the reads.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/sharding-balancer-administration/#chunk-migration-procedure\" target=\"_blank\">Chunk Migration Procedure</a>\n</li>\n</ul>"
+                    },
+                    {
+                        "id": "5bb40e6e0b09f22b029a00c6",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Which of the following are traits of a hashed _id as a shard key, relative to an unhashed _id? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Inserts on auto-generated ObjectId\u2019s will be distributed across shards",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Range queries (to find documents created on a particular week, for example) may be less efficient",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Increased security due to hashing",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><em>Auto-generated ObjectId's</em> are monotonically increasing values. Using those as <em>shard keys</em> results in one shard getting all the <code>insert</code> operations. Hashing those <code>ObjectId</code> values will create a uniform distribution of values, therefore sending <code>insert</code> operations on all shards in a distributed fashion.</p>\n\n<p>Unfortunately, a range of documents who may have been colocated in the same <em>chunks</em>, will now be distributed randomly in all the <em>chunks</em>. The consequence is that any range query on a <em>hashed shard key</em> needs to be sent to all shards, making those queries less efficient, and also impacting the scalability of the system.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/hashed-sharding/\" target=\"_blank\">Hashed Sharding</a>\n</li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/5aa34cf3c76aaf0ebdea9a91/tab/5aa34cf3c76aaf0ebdea9a92\">Lesson on hashed shard keys</a></li>\n-->\n</ul>\n\n"
+                    },
+                    {
+                        "id": "5bb40eb20b09f22b029a00c8",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>\nConsider a collection of users with the following fields and possible values: \n</p>\n<ul>\n<li>phone_number -- a 10-digit telephone number (string)</li>\n<li>eye_color -- \"brown\", \"hazel\", \"blue\", \"green\", or \"other\" (string)</li>\n<li>weight -- an integer in pounds; known for about half the users</li>\n<li>started_driving_at -- the age at which the user got their driver's license in years. For most users this is 15, 16, 17, or 18. (integer)\n</li>\n<li>_id -- automatically created on insert (ObjectId)</li>\n</ul>\n<p>\nAssuming the data-access patterns also support your choice, which of these fields would make the best shard key?\n</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "phone_number",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "eye_color",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "weight",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "started_driving_at",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "_id",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Phone number is the best selection here.</p> \n<p>With <code>weight</code>, <code>eye_color</code>, and <code>started_driving_at</code>, we run the risk of low <em>cardinality</em> and wouldn't get a good distribution.</p> \n<p><code>_id</code> would not make a good shard key because it isn't something meaningful we could query the database with in normal circumstances, like searching for a customer record when they call into a call center.</p>\n\n<p>To learn more, visit the following MongoDB Documentation pages:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#choosing-a-shard-key\" target=\"_blank\">Choosing a shard key</a></li>\n<li><a href=\"https://www.mongodb.com/blog/post/on-selecting-a-shard-key-for-mongodb\" target=\"_blank\">Blog Post on selecting a shard key</a></li>\n<!--\n<li><ahref=\"https://university.mongodb.com/mercury/lesson/5aa34cf3c76aaf0ebdea9a91/tab/5aa34cf3c76aaf0ebdea9a92\">Lesson on shard keys</a></li>\n-->\n</ul>"
+                    },
+                    {
+                        "id": "5bb433ef0b09f22b0199fffb",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>In a sharded cluster, which of the following indexes must contain only unique values? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The _id index",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The shard key index",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "A single-field index",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <code>_id</code> must be unique in a replica set, as those values are used in the <em>Oplog</em> to reference documents to update. This characteristic of uniqueness is enforced by the system.</p>\n\n<p>In a sharded cluster, <code>_id</code> must also be unique across the sharded collection because documents may migrate to another shard, and identical values would prevent the document to be inserted in the receiver shard, failing the migration of the chunk. It is the responsibility of the application to ensure uniqueness on <code>_id</code> for a given collection in a sharded cluster if it is not the <em>shard key</em>.</p>\n\n<p>Note that if <code>_id</code> is used as the shard key, the system will automatically enforce the uniqueness of the values, as chunk ranges are assigned to a single shard, and the shard can ensure uniqueness on the values in that range.</p>\n\n<p>As for the shard key index, if it's not <code>_id</code>, it is perfectly acceptable to have identical values for different documents. However, beware of having too many documents with the same values, as this will lead to <em>jumbo chunks</em>.</p>\n\n<p>To learn more, visit the following MongoDB Documentation pages:</p>\n<ul>\n<li><a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#unique-indexes\" target=\"_blank\">Unique Indexes in a Sharded Cluster</a></li>\n<li><a href=\"https://docs.mongodb.com/manual/core/index-unique/\" target=\"_blank\">Unique Indexes</a></li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5bb40e080b09f22b029a00c4",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>An insufficiently granular (\u201clow cardinality\u201d) shard key can result in which type of problems? Check all that apply.</p>",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Large chunks that cannot be split.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "More shards getting hit on certain queries.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Limits to document size.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Documents with the same values for their shard key will be colocated in the same <em>chunk</em>. If a lot of documents have the same values, this may result in a very big <em>chunk</em>. The system is unable to split this <em>chunk</em> as there is no value between the bounds of the <em>chunk</em>. For example if a shard key is the name of a country, all documents with <em>USA</em> are placed in the same <em>chunk</em>, and this <em>chunk</em> can't be split, as there is no other value between <em>USA</em> and <em>USA</em>.</p>\n\n<p><em>Chunks</em> that can not be split are called <em>jumbo chunks</em>.</p>\n\n<p>To learn more, visit the following MongoDB Documentation page:</p>\n<ul>\n<li>\n<a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#shard-key-cardinality\" target=\"_blank\">Shard Key Cardinality</a>\n</li>\n<!--\n<li><a href=\"https://university.mongodb.com/mercury/lesson/aa325e996f30f818591a5a8/tab/5aa325ea96f30f818591a5a9\">Lesson on cardinality of a shard key</a></li>\n-->\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            }
+        ]
+    }
+}
