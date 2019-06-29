@@ -1,0 +1,1812 @@
+{
+    "examRole": "DBA",
+    "displayName": "MongoDB DBA Exam",
+    "studentExamDates": [
+        {
+            "id": "5d177b2eeb88831b1eb5d783",
+            "submitDate": "2019-06-29T14:52:34.177000Z"
+        },
+        {
+            "id": "5d177b19eb88831b1eb5d782",
+            "submitDate": "2019-06-29T14:52:11.997000Z"
+        },
+        {
+            "id": "5d1779d616d2372b7aaf35a7",
+            "submitDate": "2019-06-29T14:46:49.608000Z"
+        },
+        {
+            "id": "5d17796216d2372b7aaf35a5",
+            "submitDate": "2019-06-29T14:44:54.599000Z"
+        },
+        {
+            "id": "5d177924eb88831b1eb5d780",
+            "submitDate": "2019-06-29T14:43:52.352000Z"
+        },
+        {
+            "id": "5d1778d116d2372b7aaf35a2",
+            "submitDate": "2019-06-29T14:42:34.164000Z"
+        },
+        {
+            "id": "5d1777fe16d2372b7aaf359f",
+            "submitDate": "2019-06-29T14:39:30.034000Z"
+        },
+        {
+            "id": "5d176bcfeb8883736bb5d788",
+            "submitDate": "2019-06-29T14:23:32.395000Z"
+        }
+    ],
+    "studentExam": {
+        "id": "5d177b2eeb88831b1eb5d783",
+        "userId": 703428,
+        "score": 0,
+        "total": 60,
+        "sections": [
+            {
+                "id": "a38a72b3300bda14ca31cd75",
+                "name": "Philosophy & Features",
+                "total": 3,
+                "problems": [
+                    {
+                        "id": "5c3e090dfb1d1e9ce171bd17",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which of the following improves read performance in MongoDB?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Indexes",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Using keyfile authentication",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "A write concern of <tt class=\"docutils literal\">w: 2</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\">A write concern of <tt class=\"docutils literal\">w: 2</tt></p>\n<p>A write concern of <tt class=\"docutils literal\">w: 2</tt> only impacts the acknowledgement of a write sent\nback to the client. It has no impact on read or write performance.</p>\n</li>\n<li><p class=\"first\">Using keyfile authentication</p>\n<p>This secures the network between replica set nodes, but will not improve read\nperformance.</p>\n</li>\n</ul>\n<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\">Indexes</p>\n<p><strong>Indexes</strong> are special data structures in MongoDB that allow ordered access\nof data and prevent collection scans, thus improving read performance.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c1aa71302e5d1e0db0bfbe3",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Select the valid shell commands that will establish a connection with the <strong>bears</strong> database using a <em>username</em> and <em>password</em> authentication method via the admin database.",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<pre class=\"code bash literal-block\">\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017/admin?db=bears&quot;</span> --ssl --username user --password ******\n</pre>\n",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code bash literal-block\">\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017&quot;</span> --db bears --authenticationDatabase admin --ssl --username user --password ******\n</pre>\n",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code bash literal-block\">\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017/bears&quot;</span> --authenticationDatabase admin --ssl --username user --password ******\n</pre>\n",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>You can specify the database that you are trying to connect with either in the connection string or as a command line argument like in the correct choices below.</p>\n<pre class=\"code bash literal-block\">\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017/bears&quot;</span> --authenticationDatabase admin --ssl --username user --password ******\n\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017&quot;</span> --db bears --authenticationDatabase admin --ssl --username user --password ******\n</pre>\n<p>In the following choice the connection string is specifying to connect to the admin database, and is then using an invalid connection string parameter to specify another database to connect to. Since the parameter is invalid and you can not connect to two databases at the same time, this answer is incorrect.</p>\n<pre class=\"code bash literal-block\">\nmongo <span class=\"literal string double\">&quot;mongodb://example.mongodb.net:27017/admin?db=bears&quot;</span> --ssl --username user --password ******\n</pre>\n"
+                    },
+                    {
+                        "id": "5c8bc0c3daa4f4e97a679efb",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following aggregation pipeline:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">services</span>\n\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">restaurants</span><span class=\"punctuation\">.</span><span class=\"name other\">aggregate</span><span class=\"punctuation\">([</span>\n  <span class=\"punctuation\">{</span>\n    <span class=\"literal string double\">&quot;$sort&quot;</span> <span class=\"operator\">:</span> <span class=\"punctuation\">{</span><span class=\"literal string double\">&quot;rating&quot;</span> <span class=\"operator\">:</span> <span class=\"operator\">-</span><span class=\"literal number integer\">1</span><span class=\"punctuation\">}</span>\n  <span class=\"punctuation\">},</span>\n  <span class=\"punctuation\">{</span>\n    <span class=\"literal string double\">&quot;$match&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span>\n      <span class=\"literal string double\">&quot;reviews&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;$gte&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">5</span> <span class=\"punctuation\">}</span>\n    <span class=\"punctuation\">}</span>\n  <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">])</span>\n</pre>\n<p>What optimizations will the optimizer make to the stages?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "the result set will be limited to reduce network latency",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "the <tt class=\"docutils literal\">$match</tt> stage will be moved to before the <tt class=\"docutils literal\">$sort</tt> stage",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "the sort order will be reversed to the direction of the shard key",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "The optimizer will re-order the match stage to before the sort."
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "ba1c1d7c799e90c738b6b8dc",
+                "name": "CRUD",
+                "total": 5,
+                "problems": [
+                    {
+                        "id": "5c2647416c912790f339324d",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which of the following is a valid regular expression query, searching the\n<tt class=\"docutils literal\">dinosaurs</tt> collection for every name ending in <tt class=\"docutils literal\">odon</tt>?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $regex: <span class=\"pre\">/.*odon$/</span> }})</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $text: <span class=\"pre\">/.*odon$/</span> }})</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $regex: <span class=\"pre\">/.*odon.*/</span> }})</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $in: <span class=\"pre\">/^.*odon/</span> }})</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $text: /odon/ }})</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is <tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $regex: <span class=\"pre\">/.*odon$/</span> }})</tt>.\nThis regular expression will search all dinosaur names that match &quot;odon&quot; at\nthe end of the name because of the <tt class=\"docutils literal\">$</tt> regular expression operator.</p>\n<p>Why not <tt class=\"docutils literal\"><span class=\"pre\">db.dinosaurs.find({name:</span> { $regex: <span class=\"pre\">/.*odon.*/</span> }})</tt>? Because the end\nof line regular expression operator isn't specified, this would also match\ndinosuar names like <cite>Thecodontosaurus</cite>.</p>\n<p>All other options are incorrect, the <tt class=\"docutils literal\">$text</tt> and <tt class=\"docutils literal\">$in</tt> query operators do\nnot accept regular expressions.</p>\n<p>To learn more, see the following:</p>\n<ul class=\"simple\">\n<li>A regular expression <a class=\"reference external\" href=\"https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285\">tutorial</a></li>\n<li><tt class=\"docutils literal\">$regex</tt> <a class=\"reference external\" href=\"https://docs.mongodb.com/manual/reference/operator/query/regex/\">documentation</a></li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c254395dbbed90e9abdbf1b",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Select all statements that accurately describe how the <tt class=\"docutils literal\">updateOne</tt> command\nworks in conjunction with the <tt class=\"docutils literal\">$set</tt> operator.",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">updateOne</tt> in conjunction with <tt class=\"docutils literal\">$set</tt> updates the first document that matches the query used as the first parameter",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "if the field does not exist, <tt class=\"docutils literal\">$set</tt> will add a new field with the specified value",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">$set</tt> updates an existing document field with the given value",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers:</strong></p>\n<p>All choices are correct.</p>\n<p><tt class=\"docutils literal\">$set</tt> operator updates the field value if the field exists and adds a field\nwith a new value if it does not exist in the document.</p>\n<p>For additional description, such as using <tt class=\"docutils literal\">$set</tt> with array fields see the\n<a class=\"reference external\" href=\"https://docs.mongodb.com/manual/reference/operator/update/set/\">relevant documentation page.</a></p>\n"
+                    },
+                    {
+                        "id": "5c2a65599dff049e58aabb00",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following query:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">groceries</span><span class=\"punctuation\">.</span><span class=\"name other\">find</span><span class=\"punctuation\">({</span> <span class=\"name other\">type</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;produce&quot;</span> <span class=\"punctuation\">})</span>\n</pre>\n<p>Which of the following documents could be returned by this query?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">{ name: &quot;celery&quot;, type: &quot;produce&quot;, USD_per_pound: 1.5 }</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{ name: &quot;asparagus&quot;, type: &quot;produce&quot;, USD_per_pound: 5 }</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{ name: &quot;cabbage&quot;, type: &quot;produce&quot;, USD_per_pound: 3 }</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "All answers are correct, because the query only specifies the key-value pair\n<tt class=\"docutils literal\">{ type: &quot;produce&quot; }</tt>, and all three documents contain this pair."
+                    },
+                    {
+                        "id": "5c1d4d44b0d31368e816dd59",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider these two commands:</p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">db.collection.find({ &quot;$and&quot;: [ { &quot;field1&quot;: 20 }, { &quot;field2&quot;: 10 } ] })</tt></li>\n<li><tt class=\"docutils literal\">db.collection.find({ &quot;field1&quot;: 20, &quot;field2&quot;: 10 })</tt></li>\n</ul>\n<p>Which of the following is true about these two commands?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The results will be different, because <tt class=\"docutils literal\">find</tt> will use the first argument for search and the second for projection",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The number of results will be different, because <tt class=\"docutils literal\">find</tt> uses <tt class=\"docutils literal\">$or</tt> by default and will return more documents as a result",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The results are the same, but one command is shorter than the other",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<p><em>The results are the same, but one command is shorter than the other</em></p>\n<blockquote>\nThese two queries will return the same results.</blockquote>\n<p><strong>Incorrect Answers:</strong></p>\n<p><em>The number of results will be different, because</em> <tt class=\"docutils literal\">find</tt> <em>uses</em> <tt class=\"docutils literal\">$or</tt> <em>by\ndefault and will return more documents as a result</em></p>\n<blockquote>\nWhen multiple fields are used in a <tt class=\"docutils literal\">find</tt> query it employs <tt class=\"docutils literal\">$and</tt> by\ndefault.</blockquote>\n<p><em>The results will be different, because</em> <tt class=\"docutils literal\">find</tt> <em>will use the first argument\nfor search and the second for projection</em></p>\n<blockquote>\nWhile <tt class=\"docutils literal\">find</tt> does use the second argument as a projection query, in this\nexample there was only one argument, which was the search query.</blockquote>\n"
+                    },
+                    {
+                        "id": "5c2536d6979c63b3ad8c4e09",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which of the following statements is true of the <tt class=\"docutils literal\">insertMany</tt> command?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "In case of duplicate key error, all document field values are replaced except for the <tt class=\"docutils literal\">_id</tt>.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">insertMany</tt> cannot insert any documents if one of the documents results in an error.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Always inserts documents in the array defined order.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It takes an array of documents to be inserted.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Documents passed to <tt class=\"docutils literal\">insertMany</tt> are required to have <tt class=\"docutils literal\">_id</tt> field defined.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers</strong></p>\n<ul>\n<li><p class=\"first\">It takes an array of documents to be inserted.</p>\n<p><tt class=\"docutils literal\">insertMany</tt> takes an array of documents and inserts them in the specified collection.</p>\n</li>\n</ul>\n<p><strong>Incorrect Answers</strong></p>\n<ul>\n<li><p class=\"first\">Documents passed to <tt class=\"docutils literal\">insertMany</tt> are required to have <tt class=\"docutils literal\">_id</tt> field defined.</p>\n<p>The <tt class=\"docutils literal\">_id</tt> field behavior is the same for any insert command.\nIf the documents in the <tt class=\"docutils literal\">insertMany</tt> input array do not have the <tt class=\"docutils literal\">_id</tt>\nfield defined, the MongoDB server or the client driver will set the field using an\n<tt class=\"docutils literal\">ObjectId</tt> value.</p>\n</li>\n<li><p class=\"first\"><tt class=\"docutils literal\">insertMany</tt> cannot insert any documents if one of the documents results in an error.</p>\n<p><tt class=\"docutils literal\">insertMany</tt> will insert all documents until an error is detected in the case of\n<strong>ordered</strong> inserts. In the case of <strong>unordered</strong> insert, insertMany will attempt\nto insert all documents, and the resulting errors are collected and reported\nback to the client.</p>\n</li>\n<li><p class=\"first\">Always inserts documents in the array defined order.</p>\n<p><tt class=\"docutils literal\">insertMany</tt> will insert by default the documents in <strong>order</strong>, however it\ncan be executed in <strong>unordered</strong> mode.</p>\n</li>\n<li><p class=\"first\">In case of duplicate key error, all document field values are replaced except for the <tt class=\"docutils literal\">_id</tt>.</p>\n<p>Incorrect, in the case of duplicate key error, the inflicting document fails to\ninsert and the error is reported to the client.</p>\n</li>\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "1c335bcc03bf293c28370a7a",
+                "name": "Indexes",
+                "total": 11,
+                "problems": [
+                    {
+                        "id": "5c3fbe684d1acdb7a52cf648",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "What is the principal reason why adding indexes may lead to slower write operations?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "There are additional writes to disk to keep the indexes in sync with the data",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Index values can not be compressed as efficiently as BSON documents",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "MongoDB does not use Bloom filters for the indexes",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "They will take space in the working set kept in RAM",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "B-Trees are slow to traverse",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\">There are additional writes to disk to keep the indexes in sync with the data</p>\n<p>If you have 5 indexes, writing a new document will require 6 logical writes.\nHowever, don't let this drawback discourage you to create indexes, as\nrunning collection scan queries are likely going to impact more negatively\nyour performance.</p>\n</li>\n</ul>\n<p><strong>Incorrect Option:</strong></p>\n<ul>\n<li><p class=\"first\">They will take space in the working set kept in RAM</p>\n<p>It is true that they will impact the size of the working set, and may\nresult in more reads to the disk, however only if you don't have enough RAM.</p>\n</li>\n<li><p class=\"first\">MongoDB does not use Bloom filters for the indexes</p>\n<p>Bloom filters is a cool technology that may be used in the future.\nThey may help for some workloads, however they are not the main reason,\nas they also produce some additional writes for each index.</p>\n</li>\n<li><p class=\"first\">Index values can not be compressed as efficiently as BSON documents</p>\n<p>The WiredTiger storage engine does prefix compression on index keys,\nwhich usually results in better compression on large datasets.</p>\n</li>\n<li><p class=\"first\">B-Trees are slow to traverse</p>\n<p>B-Trees tend to be good data structure to find quickly information, so\nthis is not a good reason.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c41e09005d6309c6ca4a6f8",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "What is the default mode when using <tt class=\"docutils literal\">explain</tt> to analyze a query?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">executionStats</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">allPlansExecution</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">queryPlanner</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "The correct answer is <tt class=\"docutils literal\">queryPlanner</tt>. This is to allow immediate use on a\nserver that may already be under heavy load to help the administrator determine\nif a query would have used an index without impacting other operations more\nheavily."
+                    },
+                    {
+                        "id": "5c40dc88522fe5e9201ac17f",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following operation:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">employees</span><span class=\"punctuation\">.</span><span class=\"name other\">createIndex</span><span class=\"punctuation\">(</span> <span class=\"punctuation\">{</span> <span class=\"name other\">firstname</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span> <span class=\"name other\">lastname</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span> <span class=\"punctuation\">)</span>\n</pre>\n<p>Which of the following are true about this operation?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "mongod will throw an error.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It builds two indexes.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It builds one index.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers:</strong></p>\n<p><em>It builds one index.</em></p>\n<blockquote>\nThis answer is correct. This operation will build a single index, on the\n<tt class=\"docutils literal\">firstname</tt> and <tt class=\"docutils literal\">lastname</tt> fields.</blockquote>\n<p><strong>Incorrect Answers:</strong></p>\n<p><em>mongod will throw an error.</em></p>\n<blockquote>\nmongod will not throw an error. It will start the index build.</blockquote>\n<p><em>It builds two indexes.</em></p>\n<blockquote>\nThis answer is incorrect - only one index will be built by this operation.</blockquote>\n"
+                    },
+                    {
+                        "id": "5c488f06c1ac97a066c392cb",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You issue the following query against our database:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">inventory</span><span class=\"punctuation\">.</span><span class=\"name other\">find</span><span class=\"punctuation\">(</span> <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;qty&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;$gte&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">20</span> <span class=\"punctuation\">}</span> <span class=\"punctuation\">}</span> <span class=\"punctuation\">)</span>\n</pre>\n<p>Which of the following commands will create an index that will cover the query?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: &quot;$range&quot; } )</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: 1 } )</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: &quot;sorted&quot; } )</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: 1 } )</tt></p>\n<p>This will create an index on the <tt class=\"docutils literal\">&quot;qty&quot;</tt> field, which will cover the range\nquery.</p>\n</li>\n</ul>\n<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: $range } )</tt></p>\n<p>You cannot specify an aggregation operator when creating an index. The\n<tt class=\"docutils literal\">$range</tt> operator returns an array whose elements are a generated sequence\nof numbers.</p>\n</li>\n<li><p class=\"first\"><tt class=\"docutils literal\">db.records.createIndex( { &quot;qty&quot;: sorted } )</tt></p>\n<p>Sorted is not an option you can pass to an index. Indexes are already sorted,\nyou can specify the direction of the sort using 1 or -1 when creating the\nindex.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c5238dfa05f9cf7a6414d0e",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Having a good compound shard key on a collection:",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "there will be fewer shards required for the collection",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "helps avoid potential un-splittable jumbo chunks",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "allows for even distribution of the collection",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer</strong></p>\n<ul>\n<li><p class=\"first\"><em>helps avoid potential un-splittable jumbo chunks</em></p>\n<p>In the case where a chunk's upper bound is equal to its lower bound, it can\nnot be split, which hinders the benefits of horizontal scaling. Creating a\ncompound key mitigates that, by adding an additional criteria for chunk upper\nan lower bounds. This allows chunks with identical value on one field to be\nsplit by the values of another field in the shard key.</p>\n</li>\n<li><p class=\"first\"><em>allows for even distribution of the collection</em></p>\n<p>Having a good compound shard key can only improve the collection distribution\nbecause it adds a parameter for the distribution criteria.</p>\n</li>\n</ul>\n<p><strong>Incorrect Answer</strong></p>\n<ul>\n<li><p class=\"first\"><em>there will be fewer shards required for the collection</em></p>\n<p>This is incorrect, since your shard key does not determine the number of\nshards in your cluster, and that decision is made at an earlier step of the\ncollection sharding process.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c428804a6213a156f562dc1",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Select the appropriate option(s) below that should always be kept in mind\nregarding indexes:",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Indexes are part of the database &quot;working set&quot;",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Indexes are data structures that require additional resources as they\ngrow",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Indexes should be taken into consideration for sizing and maintenance",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "All answers are correct. Indexes are critical for increased performance, but\nthey aren't free and must be considered when determining disk and memory\nrequirements for a deployment machine."
+                    },
+                    {
+                        "id": "5c4776809713b60f3c2b3132",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Given the following query:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">animals</span><span class=\"punctuation\">.</span><span class=\"name other\">find</span><span class=\"punctuation\">(</span>\n  <span class=\"punctuation\">{},</span>\n  <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;_id&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">0</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;species&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;name&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;number_of_chromosomes&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">).</span><span class=\"name other\">sort</span><span class=\"punctuation\">(</span>\n  <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;number_of_chromosomes&quot;</span><span class=\"operator\">:</span> <span class=\"operator\">-</span><span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">)</span>\n</pre>\n<p>and the following index:</p>\n<pre class=\"code js literal-block\">\n<span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;number_of_chromosomes&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n</pre>\n<p>How will the data get retrieved, and why?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "index scan followed by a sort, because the index is built in ascending order",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "in-memory sort after the data is retrieved from the collection",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "index scan in descending order without the need to sort",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct answer:</strong></p>\n<ul class=\"simple\">\n<li>index scan in descending order without the need to sort</li>\n</ul>\n<p>This is because when we are sorting with a single field index, we can always\nsort our documents either in ascending or descending order regardless of the\nphysical ordering of the index keys.</p>\n"
+                    },
+                    {
+                        "id": "5c54a549fc67ab45aa40d461",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Given a replica set and the following set of commands run from the secondary\nnode (<tt class=\"docutils literal\">port 27003</tt>, node name: <tt class=\"docutils literal\">r3</tt>) of the replica set:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">admin</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">shutdownServer</span><span class=\"punctuation\">()</span>\n</pre>\n<p>What will be the result of the following shell command?</p>\n<pre class=\"code sh literal-block\">\nmongod --port <span class=\"literal number\">27003</span> --dbpath /data/r3 --logpath /data/r3/r3.log --fork\n</pre>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "this will restart the replica set with an additional node called <tt class=\"docutils literal\">r3</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">r3</tt> will get started and become part of the replica set again",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">r3</tt> will be run as a standalone node",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">r3</tt> will become the primary node of the replica set",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "this command is invalid",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is</p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">r3</tt> will be run as a standalone node</li>\n</ul>\n<p>This is because the command did not include the <tt class=\"docutils literal\"><span class=\"pre\">--replSet</span></tt> option, even\nthough all other configurations stayed the same. All other answers are\nincorrect.</p>\n"
+                    },
+                    {
+                        "id": "5c40b8622974a7192f69874a",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following index in the <tt class=\"docutils literal\">plants</tt> collection:</p>\n<pre class=\"code js literal-block\">\n<span class=\"punctuation\">{</span> <span class=\"name other\">climate</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n</pre>\n<p>Which of the following queries could use this index?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">db.plants.find({ type: { $in: [ &quot;succulent&quot;, &quot;moss&quot; ] } })</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.plants.find({ climate: { $in: [ &quot;marsh&quot;, &quot;swamp&quot; ] } })</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.plants.find({ type: &quot;conifer&quot;, climate: &quot;forest&quot; })</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers:</strong></p>\n<p><tt class=\"docutils literal\">db.plants.find({ climate: { $in: [ &quot;marsh&quot;, &quot;swamp&quot; ] } })</tt></p>\n<p><tt class=\"docutils literal\">db.plants.find({ type: &quot;conifer&quot;, climate: &quot;forest&quot; })</tt></p>\n<blockquote>\n<em>These queries can use the index, because the query selector filters on the\n&quot;climate&quot; field.</em></blockquote>\n<p><strong>Incorrect Answer:</strong></p>\n<p><tt class=\"docutils literal\">db.plants.find({ type: { $in: [ &quot;succulent&quot;, &quot;moss&quot; ] } })</tt></p>\n<blockquote>\n<em>These queries can NOT use the index, because the query selector does not\nfilter on the &quot;climate&quot; field.</em></blockquote>\n"
+                    },
+                    {
+                        "id": "5c4a2618515994c2f5d2882e",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Given the following query:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">songs</span><span class=\"punctuation\">.</span><span class=\"name other\">find</span><span class=\"punctuation\">(</span>\n  <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;seconds&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;$lt&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">400</span> <span class=\"punctuation\">},</span> <span class=\"literal string double\">&quot;genre&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;rock&quot;</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">).</span><span class=\"name other\">sort</span><span class=\"punctuation\">(</span>\n  <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;rating&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">)</span>\n</pre>\n<p>Which index on the <em>songs</em> collection will be the most performant for the above\nquery?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;rating&quot;: 1, &quot;genre&quot;: 1, &quot;seconds&quot;: 1}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;rating&quot;: 1, &quot;seconds&quot;: 1, &quot;genre&quot;: 1}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;genre&quot;: 1, &quot;seconds&quot;: 1, &quot;rating&quot;: 1}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;genre&quot;: 1, &quot;rating&quot;: 1, &quot;seconds&quot;: 1}</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;seconds&quot;: 1, &quot;genre&quot;: 1, &quot;rating&quot;: 1}</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <strong>correct</strong> answer is</p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">{&quot;genre&quot;: 1, &quot;rating&quot;: 1, &quot;seconds&quot;: 1}</tt></li>\n</ul>\n<p>Making the following answers <strong>incorrect</strong></p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">{&quot;genre&quot;: 1, &quot;seconds&quot;: 1, &quot;rating&quot;: 1}</tt></li>\n<li><tt class=\"docutils literal\">{&quot;rating&quot;: 1, &quot;genre&quot;: 1, &quot;seconds&quot;: 1}</tt></li>\n<li><tt class=\"docutils literal\">{&quot;rating&quot;: 1, &quot;seconds&quot;: 1, &quot;genre&quot;: 1}</tt></li>\n<li><tt class=\"docutils literal\">{&quot;seconds&quot;: 1, &quot;genre&quot;: 1, &quot;rating&quot;: 1}</tt></li>\n</ul>\n<p>The most efficient index for the given query should follow the <strong>equality,\nsort, range</strong> rule, where the compound index is built in this order for a query\nthat employs equality, range and sort conditions in it. This rule helps to\navoid inefficient operations such as a full collection scan or in\nmemory sort.</p>\n"
+                    },
+                    {
+                        "id": "5c421f3c715fd7ac152d5bdc",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which data structure is used to store a newly created index in MongoDB?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Heap",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Graph",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Binary Tree",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "B-tree",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Hash list",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is:</p>\n<ul class=\"simple\">\n<li>B-Tree</li>\n</ul>\n<p>All other answers are incorrect. B-tree is commonly used to store indexes as it\nhas an efficient lookup speed because you need fewer comparisons to find the\nvalue that they are looking for in a B-tree.</p>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "f531f6c8144e8c8aaeb8e445",
+                "name": "Server Administration",
+                "total": 11,
+                "problems": [
+                    {
+                        "id": "5c2d22c3bb04468c889ad939",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>You are attempting to run a <tt class=\"docutils literal\">mongod</tt> with the following options in your\nterminal. Assume the directory paths and permissions are correctly set.</p>\n<pre class=\"code sh literal-block\">\nmongod --port <span class=\"literal number\">35000</span> --dbpath /home/user/mongodb/data --fork\n</pre>\n<p>The <tt class=\"docutils literal\">mongod</tt> is not starting. Which of the following is the most likely\ncause?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">--bind_ip_all</span></tt> is not specified",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "the directory <tt class=\"docutils literal\">/home/user/mongodb/data</tt> is empty",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "the port must be 27017",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">--logpath</span></tt> is not specified",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">--config</span></tt> is not specified",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<p><tt class=\"docutils literal\"><span class=\"pre\">--logpath</span></tt> is not specified.</p>\n<p>When running <tt class=\"docutils literal\">mongod</tt> with the <tt class=\"docutils literal\"><span class=\"pre\">--fork</span></tt> option, <tt class=\"docutils literal\"><span class=\"pre\">--logpath</span></tt> must be\nspecified.</p>\n"
+                    },
+                    {
+                        "id": "5c3cd7a94fa8e45d87fe487d",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider a write operation that takes 150 milliseconds, and a database\nprofiler that uses the default value of <tt class=\"docutils literal\">slowms</tt>.</p>\n<p>Which of the following profiler levels would cause the profiler to capture\nthis operation?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "0",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "1",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "2",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers</strong></p>\n<p><em>1</em></p>\n<blockquote>\nThis profiling level will record all operations that exceed the <tt class=\"docutils literal\">slowms</tt>\nlimit, which is 100ms by default.</blockquote>\n<p><em>2</em></p>\n<blockquote>\nThis profiling level will record all operations, regardless of how long they\ntake.</blockquote>\n<p><strong>Incorrect Answers</strong></p>\n<p><em>0</em></p>\n<blockquote>\nThis profiling level will not record <strong>any</strong> events to the\n<tt class=\"docutils literal\">system.profile</tt> collection.</blockquote>\n"
+                    },
+                    {
+                        "id": "5a9719abc9d4ec11e704edcb",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Which of the following is true for the given command line instruction:</p>\n<pre class=\"code sh literal-block\">\nmongod --dbpath /data/db --port <span class=\"literal number\">40001</span> --replSet RS-0 --bind_ip 10.0.0.10\n</pre>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The <tt class=\"docutils literal\">mongod</tt> will be accepting requests on localhost",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The <tt class=\"docutils literal\">mongod</tt> will be listening for incoming requests on port 40001",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The <tt class=\"docutils literal\">mongod</tt> will be part of a replica set with name RS-01",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Log files will be stored in folder <tt class=\"docutils literal\">/data/db</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "All incoming requests need to come from a client with ip 10.0.0.10",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\">Log files will be stored in folder <tt class=\"docutils literal\">/data/db</tt></p>\n<p>The log information will not be stored in a file, it will rather be sent\nto the standard output of the server where the <tt class=\"docutils literal\">mongod</tt> instance is running</p>\n</li>\n<li><p class=\"first\">The <tt class=\"docutils literal\">mongod</tt> will be accepting requests on localhost</p>\n<p>The <tt class=\"docutils literal\">mongod</tt> will be accepting requests on only on ip 10.0.0.10</p>\n</li>\n<li><p class=\"first\">The <tt class=\"docutils literal\">mongod</tt> will be part of a replica set with name RS-01</p>\n<p>The replica set name configured for this <tt class=\"docutils literal\">mongod</tt> is <strong>RS-0</strong> instead of\nRS-01</p>\n</li>\n<li><p class=\"first\">All incoming requests need to come from a client with ip 10.0.0.10</p>\n<p>Any client can connect to this instance as long as the established connection\nis set to 10.0.0.1. i.e.:</p>\n<p><tt class=\"docutils literal\">mongod <span class=\"pre\">--host</span> 10.0.0.1:40001</tt></p>\n</li>\n</ul>\n<p><strong>Correct Answer:</strong></p>\n<ul>\n<li><p class=\"first\">The <tt class=\"docutils literal\">mongod</tt> will be listening for incoming requests on port 40001</p>\n<p>The configured requests listening port (option <tt class=\"docutils literal\"><span class=\"pre\">--port</span></tt>) is set to 40001</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5a9730bfc9d4ec11e704edd2",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Given this log message entry:</p>\n<pre class=\"literal-block\">\n2019-01-08T11:41:01.661-0500 I COMMAND  [conn1] command test.names\nappName: &quot;MongoDB Shell&quot;\ncommand: find { find: &quot;names&quot;, filter: { _id: { $exists: 1.0 } }, $db: &quot;test&quot;}\nplanSummary: IXSCAN { _id: 1 } cursorid:118472089469 keysExamined:101\ndocsExamined:101 numYields:0 nreturned:101 reslen:3822\nlocks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } },\nCollection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms\n</pre>\n<p>Which of the following are true?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The message log level is INFORMATIONAL",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The logged component is a find command",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The logged command was handled by connection [conn1]",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>All options are correct!</strong></p>\n<ul>\n<li><p class=\"first\">Level is INFORMATIONAL</p>\n<p>This is reflected in the <strong>I</strong> value after the message timestamp information.\n<tt class=\"docutils literal\"><span class=\"pre\">2019-01-08T11:41:01.661-0500</span> **I** COMMAND&nbsp; [conn1] command <span class=\"pre\">test.names...</span></tt></p>\n</li>\n<li><p class=\"first\">The logged component was a find command</p>\n<p>We can see that by looking into the component information, <strong>COMMAND</strong>, and\nthe command description:\n<tt class=\"docutils literal\"><span class=\"pre\">**command**:</span> find { find: &quot;names&quot;, filter: { _id: { $exists: 1.0 } }, $db: &quot;test&quot;}</tt></p>\n</li>\n<li><p class=\"first\">The logged command was handled by connection [conn1]</p>\n<p>The connection information can be found as the forth information element in\nthe log message:</p>\n<p><tt class=\"docutils literal\"><span class=\"pre\">2019-01-08T11:41:01.661-0500</span> I COMMAND&nbsp; <span class=\"pre\">**[conn1]**</span></tt></p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5cdd6b556658f4f6712696b5",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>In the command below, what is the impact of the <tt class=\"docutils literal\">j: true</tt> setting?</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">products</span><span class=\"punctuation\">.</span><span class=\"name other\">insert</span><span class=\"punctuation\">(</span>\n  <span class=\"punctuation\">{</span> <span class=\"name other\">item</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;envelopes&quot;</span><span class=\"punctuation\">,</span> <span class=\"name other\">qty</span> <span class=\"operator\">:</span> <span class=\"literal number integer\">100</span><span class=\"punctuation\">,</span> <span class=\"name other\">type</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;A4&quot;</span> <span class=\"punctuation\">},</span>\n  <span class=\"punctuation\">{</span> <span class=\"name other\">writeConcern</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span> <span class=\"name other\">w</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;majority&quot;</span> <span class=\"punctuation\">,</span>  <span class=\"name other\">j</span><span class=\"operator\">:</span> <span class=\"keyword constant\">true</span> <span class=\"punctuation\">}</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">)</span>\n</pre>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "It enables journaling",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "You should never set j:true",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "It forces data to be synced to the journal before acknowledging a write",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct answer:</strong></p>\n<p>Setting {j: true} forces data to be synced to disk before acknowledging a write operation. Be aware that this may have some\nperformance impact while the operation waits for the journal commit.</p>\n<p><strong>Incorrect answers:</strong></p>\n<p><em>It enables journaling</em></p>\n<blockquote>\nEnabling or disabling journaling is an operation done at the process level, not per operation.</blockquote>\n<p><em>You should never set j:true</em></p>\n<p><tt class=\"docutils literal\">j: true</tt> is a valid write concern option. With <tt class=\"docutils literal\">j: true</tt>, MongoDB returns only after the requested number of members, including the primary, have written to the journal.</p>\n"
+                    },
+                    {
+                        "id": "5c2f7d085e250cf30debf7dc",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "What authentication mechanisms are available in the community version of\nMongoDB?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "X.509",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "LDAP",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "SCRAM",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "The correct answers are SCRAM and X.509. LDAP, and Kerberos, are only\navailable in the Enterprise version of MongoDB."
+                    },
+                    {
+                        "id": "5c4106384d1acdb7a52cf64a",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which is/are primarily authorization operation(s)?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Reading a document from the Mongo Shell",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Creating a user in any database other than admin",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Using a X.509 certificate",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Options:</strong></p>\n<ul>\n<li><p class=\"first\">Reading a document from the Mongo Shell</p>\n<p>Before you can issue the query to read a document, you would have been\nauthenticated. Now the server would verify that you are authorized to\naccess this document.</p>\n</li>\n<li><p class=\"first\">Creating a user in any database other than admin</p>\n<p>The operation of creating the user is also related to authorization.\nYou will be authorized to add this user, if you are granted the appropriate\nprivileges in this database.</p>\n</li>\n</ul>\n<p><strong>Incorrect Option:</strong></p>\n<ul>\n<li><p class=\"first\">Using an X.509 certificate</p>\n<p>You can use an X.509 certificate to authenticate a machine, or a user.\nIn both cases, the certificate helps identifying who you are, so it is\nan authorization operation.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c5b62efec971914737ad3d3",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "In the context of a role-based access control (RBAC), which of following apply\nto the principle of least privilege (POLP)?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Grant roles to users where they can explore the cluster features",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Limit root role to only one user",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Allow for all users roles to perform root actions if needed",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Grant read only roles to users by default",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Grant roles to users with minimal access required for their tasks",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\">Grant roles to users with minimal access required for their tasks</p>\n<p>Users should be granted privileges limited to the scope of the operations that\nthey need.\nMost <a class=\"reference external\" href=\"https://docs.mongodb.com/manual/reference/built-in-roles/\">built-in roles</a> have been designed with this principle in mind, however,\nyou may have to create your own database custom roles to adequately provide\nusers with the absolute necessary set of privileges they need to perform their\nexpected tasks.</p>\n</li>\n</ul>\n<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\">Grant roles to users where they can explore the cluster features</p>\n</li>\n<li><p class=\"first\">Allow for all users roles to perform root actions if needed</p>\n<p>These two options are wrong because they imply the opposite of POLP.</p>\n</li>\n<li><p class=\"first\">Grant read only roles to users by default</p>\n<p>Granting roles to users enforcing POLP does not imply restricting all database\nusers to read only mode. Quite the opposite, only read what they need to read,\nand only write what the user needs to write.</p>\n</li>\n<li><p class=\"first\">Limit root role to only one user</p>\n<p>Having a limited amount of users with root level access is a common sense\napproach, but that should not be a strict rule. If you need to have more than\none user with a given role, either root or other roles, so be it. As long it\nis  absolutely necessary to have such role so the user can perform is expected\ntasks.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c59a17cc2b8e9e0663475d0",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "What is the correct way to report a vulnerability to MongoDB?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "file a ticket in our security Jira project",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "post on the forums in MongoDB University",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "calling our support hotline",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is:</p>\n<ul class=\"simple\">\n<li>file a ticket in our security Jira project</li>\n</ul>\n<p>When you believe you have discovered a vulnerability you should file a ticket in our security Jira project including\nas much information as possible, such as contact details</p>\n"
+                    },
+                    {
+                        "id": "5c2fa347966e8fb97f54774f",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You are setting up MongoDB and have enabled authorization with the following\nsetting in your configuration file</p>\n<pre class=\"literal-block\">\nsecurity:\n  authorization: enabled\n</pre>\n<p>Which of the following statements apply?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Users will be forced to connect to MongoDB over SSL/TLS",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Authentication will now be enforced as turning on authorization\nimplicitly enables authentication",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Database users will have access to only those resources granted to\nthem through the role-based access control system",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answers are:</p>\n<ul class=\"simple\">\n<li>Authentication will now be enforced as turning on authorization\nimplicitly enables authentication</li>\n<li>Database users will have access to only those resources granted to\nthem through the role-based access control system</li>\n</ul>\n<p>The answer <em>Users will be forced to connect to MongoDB over SSL/TLS</em> is\nincorrect. These settings are contained in the <tt class=\"docutils literal\">net.ssl</tt> section of the\nconfiguration document.</p>\n"
+                    },
+                    {
+                        "id": "5c4b3364d8f382dbe40e2aad",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which of the following statements is true with regard to the localhost exemption?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "You need to use the mongod user to create additional users when connecting to a mongod for the first time.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "You can create the first user when connecting to a newly configured mongod from localhost.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Localhost connections are blacklisted by default.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Users connecting from localhost are audited in the audit log.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Any user logging on from localhost bypasses authentication",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is:</p>\n<ul class=\"simple\">\n<li>You can create the first user when connecting to a newly configured mongod from localhost.</li>\n</ul>\n<p>When you first connect to a newly configured mongod, you can create the first user even if authentication is on.\nThis user can then be used to create subsequent users as needed.</p>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "44f32b09c0f8576ea83d4ac4",
+                "name": "Application Administration",
+                "total": 10,
+                "problems": [
+                    {
+                        "id": "5c59e80d9a7bd948f89b2df3",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "What is the correct audit filter document that will enable logging any time a collection in a database is created or dropped?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;atype&quot;: [ &quot;createCollection&quot;, &quot;dropCollection&quot; ]}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">{&quot;$and&quot;:</span> <span class=\"pre\">[{&quot;atype&quot;:</span> <span class=\"pre\">&quot;createCollection&quot;},</span> {&quot;atype&quot;: <span class=\"pre\">&quot;dropCollection&quot;}]}</span></tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">{&quot;$in&quot;:</span> [&quot;createCollection&quot;, &quot;dropCollection&quot; ]}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;atype&quot;: { &quot;$in&quot;: [ &quot;createCollection&quot;, &quot;dropCollection&quot; ]}}</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;atype&quot;: { &quot;createCollection&quot;, &quot;dropCollection&quot; }}</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">{&quot;atype&quot;: { &quot;$in&quot;: [ &quot;createCollection&quot;, &quot;dropCollection&quot; ]}}</tt></li>\n</ul>\n<p>When creating an audit filter by action type, you have to use the <tt class=\"docutils literal\">&quot;atype&quot;</tt>\nfield using the <tt class=\"docutils literal\">&quot;$in&quot;</tt> operator to list the multiple operations that you are\nlooking to audit.</p>\n<p>All other answers have incorrect syntax for this operation.</p>\n"
+                    },
+                    {
+                        "id": "5c6f04f8bc3a680a215c2c7c",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following audit filter:</p>\n<pre class=\"code bash literal-block\">\n--auditFilter <span class=\"literal string single\">'{ &quot;atype&quot;: { &quot;$in&quot;: [ &quot;createCollection&quot;, &quot;dropCollection&quot; ] },\n                 &quot;param.ns&quot;: &quot;test.*&quot;}'</span>\n</pre>\n<p>Which of the following operations <strong>must</strong> appear in the audit log?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">test</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">createCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;games&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">test</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">dropCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;games&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">production</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">createCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;test&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">test</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">createCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;games&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n<p>This instruction will be logged in the audit log because both the audit\nnamespace is <tt class=\"docutils literal\">test.games</tt> and the action type <tt class=\"docutils literal\">createCollection</tt> are defined\nin the <tt class=\"docutils literal\">auditFilter</tt>.</p>\n<p><strong>Incorrect Options:</strong></p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">production</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">createCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;test&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n<p>This command namespace <tt class=\"docutils literal\">production.test</tt> is not included in the audit filter,\ntherefore the operation would not be logged.</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">test</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">dropCollection</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;games&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n<p>In this case both the action <tt class=\"docutils literal\">dropCollection</tt> and the namespace <tt class=\"docutils literal\">test.games</tt>\nare part of the audit filter. However, given the information that we have, we\ncannot guarantee that the collection <strong>games</strong> exists in the <strong>test</strong> database,\ntherefore we cannot be sure that this command will be successful. The audit log\nwill only log successful operations, operations that complete. Given that we are\nlooking for operations that <strong>must</strong> be logged, we cannot tell for sure that\nthis would be a successful operation.</p>\n"
+                    },
+                    {
+                        "id": "5c5471673655a854831cc7c0",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "When configuring a new replica set to use keyfile authentication, which of the\nfollowing applies?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "The same keyfile needs to be configured on each member.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The hostname in the keyfile for each node must match the hostname for the host it is running on.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "After starting the first member with keyfile authentication enabled, the first user must be created via the localhost exception.",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct answers</strong></p>\n<p><em>After you have started the first member with keyfile authentication enabled,\nyou must create the first user via the localhost exception.</em></p>\n<blockquote>\nThis is true as when you enable keyfile authentication, client authentication\nis enabled by default.</blockquote>\n<p><em>You must create identical keyfiles for each member.</em></p>\n<blockquote>\nEach keyfile for each node must match. If not, communication between nodes\nwill fail due to authentication errors.</blockquote>\n<p><strong>Incorrect answers</strong></p>\n<p><em>The hostname in the keyfile for each node must match the hostname for the host\nit is running on.</em></p>\n<blockquote>\nKeyfiles do not use hostnames as a means of verifying where a connection is\ncoming from. X.509 authentication does.</blockquote>\n"
+                    },
+                    {
+                        "id": "5c4786efc967a2449edb89c2",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Given this partial config for a mongod that should be using\nX.509 for internal authentication:</p>\n<pre class=\"code sh literal-block\">\n...\nsecurity:\n  clusterAuthMode: x509\nnet:\n  mode: preferSSL\n  allowInvalidCertificates: <span class=\"name builtin\">true</span>\n  CAFile: ca.pem\n  clusterFile: member1.pem\n...\n</pre>\n<p>Which line is wrong and should be removed or modified?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">allowInvalidCertificates: true</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">mode: preferSSL</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">clusterAuthMode: x509</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">CAFile: ca.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">clusterFile: member1.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\">allowInvalidCertificates: true</tt></p>\n<blockquote>\n<p>First, you should avoid this option, especially on the servers.\nIf you want to lower the SSL/TLS requirements of your servers, you\nare already doing it by having <tt class=\"docutils literal\">mode: preferSSL</tt>.</p>\n</blockquote>\n</li>\n</ul>\n<p><strong>Incorrect Options:</strong></p>\n<p>All other lines are needed to enable X.509 authentication for client-server\ncommunication with the cluster.</p>\n"
+                    },
+                    {
+                        "id": "5c4786efc967a2449edb89c8",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following user:</p>\n<pre class=\"code sh literal-block\">\n<span class=\"operator\">{</span>\n  <span class=\"literal string double\">&quot;_id&quot;</span> : <span class=\"literal string double\">&quot;admin.matt&quot;</span>,\n  <span class=\"literal string double\">&quot;user&quot;</span> : <span class=\"literal string double\">&quot;matt&quot;</span>,\n  <span class=\"literal string double\">&quot;db&quot;</span> : <span class=\"literal string double\">&quot;admin&quot;</span>,\n  <span class=\"literal string double\">&quot;roles&quot;</span> : <span class=\"operator\">[</span>\n    <span class=\"operator\">{</span>\n      <span class=\"literal string double\">&quot;role&quot;</span> : <span class=\"literal string double\">&quot;userAdminAnyDatabase&quot;</span>,\n      <span class=\"literal string double\">&quot;db&quot;</span> : <span class=\"literal string double\">&quot;admin&quot;</span>\n    <span class=\"operator\">}</span>\n  <span class=\"operator\">]</span>,\n  <span class=\"literal string double\">&quot;mechanisms&quot;</span> : <span class=\"operator\">[</span>\n    <span class=\"literal string double\">&quot;SCRAM-SHA-1&quot;</span>,\n    <span class=\"literal string double\">&quot;SCRAM-SHA-256&quot;</span>\n  <span class=\"operator\">]</span>\n<span class=\"operator\">}</span>\n</pre>\n<p>Which commands would let you see the privileges and actions for this user?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "db.getRole( &quot;userAdminAnyDatabase&quot; )",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.getUser( &quot;daniel&quot;, { &quot;showPrivileges&quot;: true } )",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "db.getRoles( { &quot;showPrivileges&quot;: true, showBuiltinRoles: true } )",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Options:</strong></p>\n<ul class=\"simple\">\n<li>db.getUser( &quot;daniel&quot;, { &quot;showPrivileges&quot;: true } )</li>\n</ul>\n<p>This is the most straightforward way to see the privileges and actions\nthis user can execute.</p>\n<ul class=\"simple\">\n<li>db.getRoles( { &quot;showPrivileges&quot;: true, showBuiltinRoles: true } )</li>\n</ul>\n<p>This command would give you more than you need, listing all the privileges\nfor all roles, however since our user has only one role, it is possible\nto locate that section in the output to see the list of privileges and\nactions that are allowed.</p>\n<p><strong>Incorrect Options:</strong></p>\n<ul class=\"simple\">\n<li>db.getRole( &quot;userAdminAnyDatabase&quot; )</li>\n</ul>\n<p>This command would provide the desired information if you add the\noption <tt class=\"docutils literal\">{&quot;showPrivileges&quot;: true}</tt> to it.\nOtherwise, the information returned is much less detailed.</p>\n"
+                    },
+                    {
+                        "id": "5c956280c426a4220d47be52",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Database users created with the built-in role <strong>readWriteAnyDatabase</strong> are\nallowed to:",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "update documents in all databases except admin",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "create documents in any database",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "change log level in any database",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "grant permissions to other users in any database",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "add nodes to a replica set",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Incorrect Options:</strong></p>\n<p><em>add nodes to a replica set</em></p>\n<blockquote>\n<strong>readWriteAnyDatabase</strong> does not grant cluster administration privileges like\nchanging replica set topology.</blockquote>\n<p><em>change log level in any database</em></p>\n<blockquote>\nChanging the log level is system administration privilege not granted by this\nrole.</blockquote>\n<p><em>update documents in all databases except admin</em></p>\n<blockquote>\nThe admin database is not excluded, although we highly discourage update state\nin the admin database.</blockquote>\n<p><em>grant permissions to other users in any database</em></p>\n<blockquote>\nGrant permissions to users is a user management privilege not granted by\n<strong>readWriteAnyDatabase</strong>.</blockquote>\n<p><strong>Correct Option</strong></p>\n<p><em>create documents in any database</em></p>\n<blockquote>\n<strong>readWriteAnyDatabase</strong> allows reads and writes against any database.</blockquote>\n"
+                    },
+                    {
+                        "id": "58247b6dc3b175e088879e40",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which of the following properties must be specified when creating a user-defined role?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Role name",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Set of privileges",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Inherited roles",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "All options are properties used in the definition of user-defined roles."
+                    },
+                    {
+                        "id": "5c4b1d9b9f1ee3ddf14f3af5",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which of the following roles should you assign to a user to enable them to grant\nthemselves any other role?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">dbOwner</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">userAdmin</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">__system</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answers are <tt class=\"docutils literal\">dbOwner</tt> and <tt class=\"docutils literal\">userAdmin</tt>. These are super user\nroles. <tt class=\"docutils literal\">dbOwner</tt> inherits the <tt class=\"docutils literal\">userAdmin</tt> role, and the <tt class=\"docutils literal\">userAdmin</tt> role\nis commonly assigned to administrative users.</p>\n<p>The <tt class=\"docutils literal\">__system</tt> role is used by MongoDB in normal operations. It is not and\nshould not be commonly assigned.</p>\n"
+                    },
+                    {
+                        "id": "5c5b57ed925b573384b15bc3",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which shell command allows to view the contents of the <tt class=\"docutils literal\">server.pem</tt>\nx509 certificate file in a <strong>readable format</strong>?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">$ openssl x509 server.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">$ cat x509 server.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">$ openssl x509 <span class=\"pre\">-in</span> server.pem <span class=\"pre\">-text</span></tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">$ openssl x509 <span class=\"pre\">-in</span> server.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">cat server.pem</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">$ openssl x509 <span class=\"pre\">-in</span> server.pem <span class=\"pre\">-text</span></tt></li>\n</ul>\n<p>All other answers are incorrect. For more information on working with encrypted\nfiles visit the <a class=\"reference external\" href=\"https://www.openssl.org/docs/\">openssl documentation page</a>.</p>\n"
+                    },
+                    {
+                        "id": "5c5b62ead88fc62fc0c6bd6c",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Where does MongoDB use TLS 1.1+ encryption algorithms?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Encrypted storage engine",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Transport layer",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Password salting",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<ul class=\"simple\">\n<li>Transport layer</li>\n</ul>\n<p>MongoDB uses TLS 1.1+ to encrypt client-server and intra-cluster network\ntransport layer communication.</p>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "b2d408ffdbe74f98ba57a460",
+                "name": "Replication",
+                "total": 10,
+                "problems": [
+                    {
+                        "id": "5c38c374f69dd994eee197cd",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which are valid read concerns in MongoDB?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "majority",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "linearizable",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "local",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Options:</strong></p>\n<p>All choices are correct.</p>\n<p><strong>majority</strong> read concern reads data that was written to a majority\nof nodes.</p>\n<p><strong>local</strong> read concern reads data at least written to the primary.\nIt is the default read concern</p>\n<p><strong>linearizable</strong> read concern reads data written to a majority of nodes prior\nto the read request, and unlike <strong>majority</strong> will wait for pending write\noperations to complete that would modify the document(s) requested</p>\n"
+                    },
+                    {
+                        "id": "5c351fdf30888e85c90dbc7e",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "What do <strong>binary</strong> and <strong>statement-based</strong> replication have in common?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "They both provide availability in a database server.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "They are both used in MongoDB.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "They both work across different operating systems.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer</strong></p>\n<p><em>They both provide availability in a database server.</em></p>\n<blockquote>\nReplicating data provides availability in a database server, because it\nkeeps multiple servers up-to-date and ready to serve database requests.</blockquote>\n<p><strong>Incorrect Answers</strong></p>\n<p><em>Both forms of replication are used in MongoDB.</em></p>\n<blockquote>\nMongoDB uses statement-based replication in replica sets. This solution\nis agnostic of any machine-level dependencies.</blockquote>\n<p><em>Both forms of replication work across different operating systems.</em></p>\n<blockquote>\n<p>Statement-based replication will work across platforms, because MongoDB\ncommands can be understood by any operating system or software version.</p>\n<p>Binary replication will <strong>not</strong> work across different platforms, because\nit uses binary differences to replicate data, and any change to the\nplatform may affect these binary differences drastically.</p>\n</blockquote>\n"
+                    },
+                    {
+                        "id": "5c3d005fad56b93182571c10",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "You need to set up a replica set. Which command(s) do you need to run to set\nup the replica set and add 2 other nodes?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">rs.initiate();</span> rs.add(node2); rs.add(node3);</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">rs.initiate();</span> rs.add(node2); rs.reconfig()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.add(node2); rs.add(node3); rs.initiate()</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is:</p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\"><span class=\"pre\">rs.initiate();</span> rs.add(node2); rs.add(node3)</tt></p>\n<p><tt class=\"docutils literal\">rs.initiate()</tt> must be run first in order to initialize the replica set, and\n<tt class=\"docutils literal\">rs.reconfig()</tt> should only be run if you are modifying the replica\nconfiguration file directly.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c35094163557422af95d3e7",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "You are required to perform a rolling upgrade on your running replica set. You\nhave upgraded the secondaries and are now ready to upgrade the primary. What\ncommand should you run on the primary before restarting it?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.remove()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.freeze()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.reconfig()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.slaveOk()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.stepDown()</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "The correct answer is <tt class=\"docutils literal\">rs.stepDown()</tt>. This will insruct the primary that it\nshould step down. The primary will check there is an electable secondary and\nwait if necessary for a secondary to catch up. It will then step down if safe\nto do so."
+                    },
+                    {
+                        "id": "5c3659666e70452e426f21ef",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which of the following commands can be used to retrieve the size of the\noplog in a MongoDB replica set?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">db.oplog.rs.stats()</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.startup_log.stats()</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">rs.printReplicationInfo()</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answers</strong></p>\n<p><tt class=\"docutils literal\">rs.printReplicationInfo()</tt></p>\n<blockquote>\nThis will return the size of the oplog in both gigabytes and minutes.</blockquote>\n<p><tt class=\"docutils literal\">db.oplog.rs.stats()</tt></p>\n<blockquote>\nThis will return all available stats on the <tt class=\"docutils literal\">oplog.rs</tt> collection.</blockquote>\n<p><strong>Incorrect Answer</strong></p>\n<p><tt class=\"docutils literal\">db.startup_log.stats()</tt></p>\n<blockquote>\nThis will return all available stats on the <tt class=\"docutils literal\">startup_log</tt> collection,\nwhich does not tell us about the oplog.</blockquote>\n"
+                    },
+                    {
+                        "id": "5c336bdb599c82a4679654bf",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have the following information for the <tt class=\"docutils literal\">members</tt> field in your\nreplicaset configuration document</p>\n<pre class=\"code sh literal-block\">\n<span class=\"literal string double\">&quot;members&quot;</span> : <span class=\"operator\">[</span>\n  <span class=\"operator\">{</span>\n    <span class=\"literal string double\">&quot;_id&quot;</span> : 0,\n    <span class=\"literal string double\">&quot;host&quot;</span> : <span class=\"literal string double\">&quot;acmecorp:27017&quot;</span>,\n    <span class=\"literal string double\">&quot;arbiterOnly&quot;</span> : false,\n    <span class=\"literal string double\">&quot;buildIndexes&quot;</span> : true,\n    <span class=\"literal string double\">&quot;hidden&quot;</span> : false,\n    <span class=\"literal string double\">&quot;priority&quot;</span> : 1,\n    <span class=\"literal string double\">&quot;tags&quot;</span> : <span class=\"operator\">{</span>\n\n    <span class=\"operator\">}</span>,\n    <span class=\"literal string double\">&quot;slaveDelay&quot;</span> : NumberLong<span class=\"operator\">(</span>0<span class=\"operator\">)</span>,\n    <span class=\"literal string double\">&quot;votes&quot;</span> : 1\n  <span class=\"operator\">}</span>,\n  <span class=\"operator\">{</span>\n    <span class=\"literal string double\">&quot;_id&quot;</span> : 1,\n    <span class=\"literal string double\">&quot;host&quot;</span> : <span class=\"literal string double\">&quot;acmecorp:27018&quot;</span>,\n    <span class=\"literal string double\">&quot;arbiterOnly&quot;</span> : false,\n    <span class=\"literal string double\">&quot;buildIndexes&quot;</span> : true,\n    <span class=\"literal string double\">&quot;hidden&quot;</span> : true,\n    <span class=\"literal string double\">&quot;priority&quot;</span> : 0,\n    <span class=\"literal string double\">&quot;tags&quot;</span> : <span class=\"operator\">{</span>\n\n    <span class=\"operator\">}</span>,\n    <span class=\"literal string double\">&quot;slaveDelay&quot;</span> : NumberLong<span class=\"operator\">(</span>3600<span class=\"operator\">)</span>,\n    <span class=\"literal string double\">&quot;votes&quot;</span> : 0\n  <span class=\"operator\">}</span>,\n  <span class=\"operator\">{</span>\n    <span class=\"literal string double\">&quot;_id&quot;</span> : 2,\n    <span class=\"literal string double\">&quot;host&quot;</span> : <span class=\"literal string double\">&quot;acmecorp:27019&quot;</span>,\n    <span class=\"literal string double\">&quot;arbiterOnly&quot;</span> : false,\n    <span class=\"literal string double\">&quot;buildIndexes&quot;</span> : true,\n    <span class=\"literal string double\">&quot;hidden&quot;</span> : false,\n    <span class=\"literal string double\">&quot;priority&quot;</span> : 1,\n    <span class=\"literal string double\">&quot;tags&quot;</span> : <span class=\"operator\">{</span>\n\n    <span class=\"operator\">}</span>,\n    <span class=\"literal string double\">&quot;slaveDelay&quot;</span> : NumberLong<span class=\"operator\">(</span>0<span class=\"operator\">)</span>,\n    <span class=\"literal string double\">&quot;votes&quot;</span> : 1\n  <span class=\"operator\">}</span>\n<span class=\"operator\">]</span>,\n</pre>\n<p>Select the following true statements.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Member 1 can never become the primary",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "If member 0 or member 2 goes down, no new primary will be elected",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Member 2 is more likely than member 0 to become primary",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answers are:</p>\n<ul class=\"simple\">\n<li>If member 0 or member 2 goes down, no new primary will be elected<ul>\n<li>This is because of the hidden node, member 1! Since it cannot vote, there\nwould be no majority to elect a new primary if member 0 or member 2 goes\ndown. An important consideration to keep in mind.</li>\n</ul>\n</li>\n<li>Member 1 can never become the primary<ul>\n<li>Because member 1 has a <cite>slaveDelay</cite>, it can never become the primary.</li>\n</ul>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c48adabfb57922c7ab251d0",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "Which command would you use to add an arbiter to an existing replica set on host mongo2, running on port 27017?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">addArb</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;mongo2:27107&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">reconfig</span><span class=\"punctuation\">({</span><span class=\"literal string double\">&quot;host&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;mongo2&quot;</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;port&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">27017</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;arbiter&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;true&quot;</span><span class=\"punctuation\">})</span>\n</pre>\n",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">add</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;mongo2:27017, arb: true&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option</strong></p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">addArb</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;mongo2:27107&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n<p>This command will add the arbiter on mongo2:27107.</p>\n<p><strong>Incorrect Options:</strong></p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">add</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;mongo2:27017, arb: true&quot;</span><span class=\"punctuation\">)</span>\n</pre>\n<p>Is not a valid command.</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">rs</span><span class=\"punctuation\">.</span><span class=\"name other\">reconfig</span><span class=\"punctuation\">({</span><span class=\"literal string double\">&quot;host&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;mongo2&quot;</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;port&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">27017</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;arbiter&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;true&quot;</span><span class=\"punctuation\">})</span>\n</pre>\n<p>Is not a valid command, you need to pass a full configuration document to rs.reconfig().</p>\n"
+                    },
+                    {
+                        "id": "5c37d3f4b6e998119958d6fd",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider a write operation performed against a replica set with write concern\n<tt class=\"docutils literal\">w: 1</tt>.</p>\n<p>After changing the write concern to <tt class=\"docutils literal\">w: &quot;majority&quot;</tt>, this operation is:</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "more likely to take longer",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "more likely to block other operations in the application",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "less likely to be rolled back",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>All three of these options are true.</p>\n<p>The write operation is <strong>more likely to take longer</strong> because the server has\nto wait for acknowledgement from a majority of nodes in the replica set. This\ntypically takes longer than waiting for only one acknowledgement.</p>\n<p>It is also <strong>less likely to be rolled back</strong>, because even if the primary node\nshuts down, there is at least one other node that's applied the write\noperation.</p>\n<p>And finally, it is <strong>more likely to block other operations in the application</strong>,\nbecause the write operation will take longer than the same operation issued\nwith write concern <tt class=\"docutils literal\">w: 1</tt>. However, this can be remedied by issuing a\n<tt class=\"docutils literal\">wtimeout</tt> that satisfies the application's need for timely acknowledgement.</p>\n"
+                    },
+                    {
+                        "id": "5c378ab491f18bfb4b4c7e88",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "In a 3-node replica set, which of the following write concerns is more durable\nthan the default?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">w: 0</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">w: 1</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">w: 2</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct answers:</strong></p>\n<p><tt class=\"docutils literal\">w: 2</tt></p>\n<p>The default write concern is <tt class=\"docutils literal\">w: 1</tt>, and waiting for 2 nodes to apply a\nwrite is <strong>more durable</strong> than only waiting for 1 node to apply it.</p>\n<p><strong>Incorrect answers:</strong></p>\n<p><tt class=\"docutils literal\">w: 1</tt></p>\n<p>This is already the default Write Concern in MongoDB, so it does not represent\na higher durability than the default.</p>\n<p><tt class=\"docutils literal\">w: 0</tt></p>\n<p>This will not wait for any nodes to apply a write before sending an\nacknowledgement, so it is a <em>less</em> durable write than the default value of\n<tt class=\"docutils literal\">w: 1</tt>.</p>\n"
+                    },
+                    {
+                        "id": "5a9b505597182d4140a45ec2",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "When connected to a replica set secondary node using the <tt class=\"docutils literal\">mongo</tt> shell, which\nof the following set of commands will return successfully?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">rs.setSlaveOk();</span> <span class=\"pre\">db.adminCommand({listDatabases:</span> 1})</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\"><span class=\"pre\">rs.setSlaveOk();</span> <span class=\"pre\">db.newcollection.insert({&quot;name&quot;:</span> <span class=\"pre\">&quot;Nathan&quot;})</span></tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">db.isMaster()</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Incorrect Option:</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\"><span class=\"pre\">rs.setSlaveOk();</span> <span class=\"pre\">db.newcollection.insert({&quot;name&quot;:</span> <span class=\"pre\">&quot;Nathan&quot;})</span></tt></p>\n<p>This command will fail since write operations cannot be performed in secondary\nnodes of a replica set.</p>\n</li>\n</ul>\n<p><strong>Correct Options:</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\"><span class=\"pre\">rs.setSlaveOk();</span> <span class=\"pre\">db.adminCommand({listDatabases:</span> 1})</tt></p>\n<p>Reads on secondary nodes need to be explicit. In the <tt class=\"docutils literal\">mongo</tt> shell we enable\nreads on secondary nodes by preceding a read command with <tt class=\"docutils literal\">rs.setSlaveOk()</tt>,\ntherefore this <tt class=\"docutils literal\"><span class=\"pre\">db.adminCommand({listDatabases:</span> 1})</tt> would return\nsuccessfully.</p>\n</li>\n<li><p class=\"first\"><tt class=\"docutils literal\">db.isMaster()</tt></p>\n<p>The <tt class=\"docutils literal\">db.isMaster()</tt> returns a document that describes the role of the\n<tt class=\"docutils literal\">mongod</tt> instance to which we are connected. This command can be run on all\nnodes, regardless of the node current replica set role.</p>\n</li>\n</ul>\n"
+                    }
+                ],
+                "score": 0
+            },
+            {
+                "id": "602dbef4bed1b67447eaa31e",
+                "name": "Sharding",
+                "total": 10,
+                "problems": [
+                    {
+                        "id": "5aa31bc996f30f818591a5a1",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Where do all non-sharded collections get stored in a sharded cluster?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Primary shard",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "In all secondaries shard nodes",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "In all primary shard nodes",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "mongos",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Config server",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\">Primary shard</p>\n<p>All <a class=\"reference external\" href=\"https://docs.mongodb.com/manual/sharding/index.html#sharded-and-non-sharded-collections\">non-sharded collections</a> will be stored in the database primary shard.</p>\n</li>\n</ul>\n<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\">Config server</p>\n<p>The config servers do not hold any application data. Just shard metadata\ninformation.</p>\n</li>\n<li><p class=\"first\">In all primary shard nodes</p>\n<p>Sharded collections documents will be distributed across all shards.\nNon-sharded are kept in the primary shard</p>\n</li>\n<li><p class=\"first\">In all secondaries shard nodes</p>\n<p>Sharded collections documents will be distributed across all shards.\nNon-sharded are kept in the primary shard</p>\n</li>\n<li><p class=\"first\">mongos</p>\n<p>The mongos does not hold any data.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c49ec64414a09cbf6ab4a6d",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "How can you increase the cardinality of the shard key?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Create an index on the shard key.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Increase the number of chunks.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Use multiple shard keys.",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "Use a compound shard key.",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "Increase the number of shards.",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<p><em>Use a compound shard key.</em></p>\n<blockquote>\nUsing a compound shard key creates more possibilities for the value of the\nshard key, by using each unique combination of all the fields in the key.</blockquote>\n<p><strong>Incorrect Answers:</strong></p>\n<p><em>Use multiple shard keys.</em></p>\n<blockquote>\nYou cannot shard on multiple keys in a collection.</blockquote>\n<p><em>Increase the number of shards.</em></p>\n<blockquote>\nAdding more shards will decrease the load on each shard, but this will not\nincrease the cardinality of the shard key.</blockquote>\n<p><em>Increase the number of chunks.</em></p>\n<blockquote>\nThis will be a <em>result</em> of increasing the cardinality of the shard key, not a\n<em>cause</em>.</blockquote>\n<p><em>Create an index on the shard key.</em></p>\n<blockquote>\nIt is already a requirement that the shard key has an index, therefore this\nwill not increase the cardinality of the shard key.</blockquote>\n"
+                    },
+                    {
+                        "id": "5aa32a1996f30f818591a601",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>Consider the following chunk document:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">use</span> <span class=\"name other\">config</span>\n<span class=\"name other\">db</span><span class=\"punctuation\">.</span><span class=\"name other\">chunks</span><span class=\"punctuation\">.</span><span class=\"name other\">findOne</span><span class=\"punctuation\">()</span>\n<span class=\"punctuation\">{</span>\n  <span class=\"literal string double\">&quot;_id&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;test.sessions-abc-yxz&quot;</span><span class=\"punctuation\">,</span>\n  <span class=\"literal string double\">&quot;ns&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;test.sessions&quot;</span><span class=\"punctuation\">,</span>\n  <span class=\"literal string double\">&quot;min&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span>\n    <span class=\"literal string double\">&quot;userId&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span>\n    <span class=\"literal string double\">&quot;sessionId&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;US00001&quot;</span>\n  <span class=\"punctuation\">},</span>\n  <span class=\"literal string double\">&quot;max&quot;</span><span class=\"operator\">:</span> <span class=\"punctuation\">{</span>\n    <span class=\"literal string double\">&quot;userId&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">10</span><span class=\"punctuation\">,</span>\n    <span class=\"literal string double\">&quot;sessionId&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;US00001&quot;</span>\n  <span class=\"punctuation\">},</span>\n  <span class=\"literal string double\">&quot;shard&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;sh-1&quot;</span><span class=\"punctuation\">,</span>\n  <span class=\"literal string double\">&quot;lastmod&quot;</span><span class=\"operator\">:</span> <span class=\"name other\">Timestamp</span><span class=\"punctuation\">(</span><span class=\"literal number integer\">0</span><span class=\"punctuation\">,</span><span class=\"literal number integer\">1</span><span class=\"punctuation\">),</span>\n  <span class=\"literal string double\">&quot;lastmodEpoch&quot;</span><span class=\"operator\">:</span> <span class=\"name other\">ObjectId</span><span class=\"punctuation\">(</span><span class=\"literal string double\">&quot;ac78f355843b62a6d5a33a76&quot;</span><span class=\"punctuation\">)</span>\n<span class=\"punctuation\">}</span>\n</pre>\n<p>Which of the following statements is true regarding the above chunk?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Documents with fields <tt class=\"docutils literal\">{&quot;userId&quot;: 10, &quot;sessionId&quot;: &quot;US00001&quot; }</tt> are located part of chunk &quot;test.sessions-abc-yxz&quot;",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "All documents in chunk &quot;test.sessions-abc-yxz&quot; are located in shard &quot;sh-1&quot;",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The shard key defined for &quot;sessions&quot; collection is <tt class=\"docutils literal\">{userId: 1, sessionId: 1}</tt>",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Incorrect Options:</strong></p>\n<ul>\n<li><p class=\"first\">Documents with fields <tt class=\"docutils literal\">{&quot;userId&quot;: 10, &quot;sessionId&quot;: &quot;US00001&quot; }</tt> are located\npart of chunk &quot;test.sessions-abc-yxz&quot;</p>\n<p>This is incorrect because the documents defined with values\n<tt class=\"docutils literal\">{&quot;userId&quot;: 10, &quot;sessionId&quot;: &quot;US00001&quot; }</tt> match the upper bound of chunk\n&quot;test.sessions-abc-yxz&quot; and therefore are excluded from this chunk.\nUpper bound of a chunk is exclusive.</p>\n</li>\n</ul>\n<p><strong>Correct Options:</strong></p>\n<ul>\n<li><p class=\"first\">The shard key defined for &quot;sessions&quot; collection is <tt class=\"docutils literal\">{userId: 1, sessionId: 1}</tt></p>\n</li>\n<li><p class=\"first\">All documents in chunk &quot;test.sessions-abc-yxz&quot; are located in shard &quot;sh-1&quot;</p>\n<p>Both options are correct. All documents of chunk &quot;test.sessions-abc-yxz&quot; are\nplaced in the shard &quot;sh-1&quot; and the shard key of the collection is\n<tt class=\"docutils literal\">{userId: 1, sessionId: 1}</tt>, given that these are the fields defined in the\nsample chunk.</p>\n</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c3f26fcbaf880de6f093683",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "The <tt class=\"docutils literal\">config</tt> database in a sharded cluster contains information such as:",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "Hints to improve the performance of sharded queries",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "The primary shard for a database",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "The distribution of chunks and chunk boundaries",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The <tt class=\"docutils literal\">config</tt> database contains a lot of information, including which shard\nis the primary shard for a database and how information on chunk distribution\nand boundaries.</p>\n<p>It does not include performance hints.</p>\n"
+                    },
+                    {
+                        "id": "5aa3518fc76aaf0ebdea9b00",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>You have sharded the collection <strong>users</strong> with the following command:</p>\n<pre class=\"code js literal-block\">\n<span class=\"name other\">sh</span><span class=\"punctuation\">.</span><span class=\"name other\">shardCollection</span><span class=\"punctuation\">(</span>\n  <span class=\"literal string double\">&quot;app.users&quot;</span><span class=\"punctuation\">,</span>\n  <span class=\"punctuation\">{</span> <span class=\"literal string double\">&quot;userId&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;last_login&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span><span class=\"punctuation\">,</span> <span class=\"literal string double\">&quot;isActive&quot;</span><span class=\"operator\">:</span> <span class=\"literal number integer\">1</span> <span class=\"punctuation\">}</span>\n<span class=\"punctuation\">)</span>\n</pre>\n<p>Now you are tasked to help a colleague define which query predicate they should\nuse to address a given critical, low latency feature of the application.\nWhich of the following query predicates should they use to implement the\nfeature?\n<em>(All of the following options are valid to implement the feature)</em></p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;name&quot;: {$exists: 1} }</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;name&quot;: &lt;String&gt;, &quot;last_login&quot;: <span class=\"pre\">{&quot;$lt&quot;:</span> <span class=\"pre\">&lt;ISODate&gt;}}</span></tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;userId&quot;: &lt;String&gt;, &quot;last_login&quot;: <span class=\"pre\">{&quot;$gte&quot;:</span> &lt;ISODate&gt; } }</tt>",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;isActive&quot;: true}</tt>",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "<tt class=\"docutils literal\">{&quot;last_login&quot;: <span class=\"pre\">{&quot;$lt&quot;:</span> &lt;ISODate&gt; }, &quot;isActive&quot;: false }</tt>",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Option:</strong></p>\n<ul>\n<li><p class=\"first\"><tt class=\"docutils literal\">{&quot;userId&quot;: &lt;String&gt;, &quot;last_login&quot;: <span class=\"pre\">{&quot;$gte&quot;:</span> &lt;ISODate&gt; } }</tt></p>\n<p>In case of equally fulfilling query predicates for the feature at hand,\ndevelopers should use the most optimized query possible. Given that we are\ndealing with a sharded query, the choice should always fall on routed queries,\nqueries that can be serviced by the shard key, which in this case can only be\nsatisfied by this option</p>\n</li>\n</ul>\n<p>All other options would be scattered gathered queries, which are less performant.</p>\n"
+                    },
+                    {
+                        "id": "5c3f57ebd9bfdc23a6c1a211",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "<p>You have the following operational requirements and benchmarks within your\norganization:</p>\n<blockquote>\n<ul class=\"simple\">\n<li>Full backup or restore times can never exceed 20 minutes</li>\n<li>Client read and writes can never exceed 95 ms latency</li>\n<li>The current machines are provisioned with 16GB of RAM and 4TB disk space</li>\n<li>Backup and recovery times with 1.5TB took 15 minutes each, respectively</li>\n<li>The next available server size is 32GB RAM and 8TB disk space with a monthly\ncost increase of 10% for double the performance.</li>\n</ul>\n</blockquote>\n<p>The application is expected to grow in users and resource consumption at a rate\nof 7% monthly. Consider the following scenarios that represent different\napplications:</p>\n<blockquote>\n<ul class=\"simple\">\n<li><em>Scenario A:</em> Your replica set nodes are consuming 10% of available RAM and\nyour database is 200GB, and a new law was passed in the EU requiring your\norganization to store certain data about EU customers within the EU. 66% of\nyour users are location within the Americas with an average read and write\nresponse time of 90ms.</li>\n<li><em>Scenario B:</em> Your replica set nodes are consuming 90% of available RAM and\nyour database is 400GB</li>\n<li><em>Scenario C:</em> Your replica set nodes are consuming 60% of a available RAM and\nyour database is 2.8TB</li>\n</ul>\n</blockquote>\n<p>Select the scenario(s) above where sharding should be considered.</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "A",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "B",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "C",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answers are scenarios A and C.</p>\n<p><em>Scenario C:</em> While the cost of vertically scaling is acceptable, we're already\nusing 2.8TB of disk space. Considering we benchmarked a backup operation and\nrestore operation at 15 minutes each with 1.5TB of data, we're already beyond\nour SLAs. Sharding should have already been considered much sooner.</p>\n<p><em>Scenario A:</em> This is a real world scenario that zone sharding was designed to\naddress, and depending on the type of information your organization stores you\nmay be subject to regulations requiring you to store data in a specific\ngeographical area. Considering the majority of users are located in the Americas\napproaching SLA limits, sharding is more appropriate here than relocating all\ndata to the EU.</p>\n<p>Let's discuss the incorrect answer.</p>\n<p>In scenario B, we're consuming 10% of available disk (400GB) and 90% of\navailable RAM. This indicates quite an abundance of indexes for more performant\nreads. Based on benchmarks, backup and restore times are within acceptable SLAs\nand the cost to scale vertically is cheaper than the cost to scale horizontally.\nBased on the information provided, sharding is not appropriate in this scenario.</p>\n"
+                    },
+                    {
+                        "id": "5aa34ba6c76aaf0ebdea9a91",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Before sharding a collection, by running the <tt class=\"docutils literal\">sh.shardCollection</tt> command in\nthe <tt class=\"docutils literal\">mongo</tt> shell, which operation is <strong>required</strong>?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "load data into the collection",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "remove all shard key duplicates",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "drop all data from the collection",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "create an index on the shard key",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "rename the collection",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>Before sharding a collection using <tt class=\"docutils literal\">sh.shardCollection</tt> command, the selected\nshard key needs to be supported by an index, therefore the correct answer is:</p>\n<ul class=\"simple\">\n<li>create an index on the shard key</li>\n</ul>\n<p>All other operations are not necessary, or desired, to enable sharding in a\ncollection.</p>\n"
+                    },
+                    {
+                        "id": "5c3e0774a55c9fbb0de6e118",
+                        "correct": false,
+                        "problemType": "checkAllThatApply",
+                        "text": "What is sharding?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "a method to ensure data availability",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "a way to vertically scale",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "a method of distributing data across multiple machines",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p>The correct answer is:</p>\n<ul class=\"simple\">\n<li>a method of distributing data across multiple machines</li>\n<li>a method to ensure data availability</li>\n</ul>\n<p>Is an <strong>incorrect</strong> answer. <em>Replication</em> is used to ensure data availability.</p>\n<ul class=\"simple\">\n<li>a way to vertically scale</li>\n</ul>\n<p>Is an <strong>incorrect</strong> answer.</p>\n<ul class=\"simple\">\n<li>Sharding is a way to horizontally scale when vertical scaling becomes either too\ncostly or you reach a data size where backups and restores will become unmanagable\nfor a single replica set. You can read more in the <a class=\"reference external\" href=\"https://docs.mongodb.com/manual/sharding/\">Sharding section of MongoDB documentation</a>.</li>\n</ul>\n"
+                    },
+                    {
+                        "id": "5c7486c29b695a0613e85177",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "Which of the following is the most important factor in choosing a shard key?",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "knowledge of the read and write workloads of the application",
+                                "correct": true,
+                                "checked": false
+                            },
+                            {
+                                "text": "knowledge of the approximate size of the collection to shard",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard key for which the different values and their frequency are known",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "shard key that is not increasing/decreasing monotically",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "using more than one field for the shard key",
+                                "correct": false,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<p><em>knowledge of the read and write workloads of the application</em></p>\n<p>This is the most important criteria.\nThere is often no perfect shard key, so compromises may be needed.</p>\n<p>If the workload is mostly writes, not using a monotonically\nincreasing/decreasing shard key and distributing the writes is crucial.</p>\n<p>If the workload is mostly reads, you want to identify the most frequent\nqueries, and ensure those get distributed and localized.\nThe queries not using the shard key will be sent to all shards.\nThose non-targeted queries do not scale well, meaning adding a new shard\nis not helping, so we want to minimize those.</p>\n<p><strong>Incorrect Answers:</strong></p>\n<p><em>knowledge of the approximate size of the collection to shard</em></p>\n<p>This will help you estimate the number of shards you may need, however not\nhelp you identify the shard key.</p>\n<p><em>shard key that is not increasing/decreasing monotically</em></p>\n<p>This is true for a write intense workload, but may not be your priority\nin a read intense workload.</p>\n<p><em>shard key for which the different values and their frequency are known</em></p>\n<p>You may not need to know the different values, however you need to have\na ballpark number on the cardinality of the values for your shard key.</p>\n<p><em>using more than one field for the shard key</em></p>\n<p>That helps increase the cardinality and reduce the frequency, however is\nis not mandatory. You may have a single field that already has good\ncardinality and frequency.</p>\n"
+                    },
+                    {
+                        "id": "5c33e30e0a96f53fc48aef25",
+                        "correct": false,
+                        "problemType": "multipleChoice",
+                        "text": "<p>Given the following query:</p>\n<pre class=\"code js literal-block\">\n<span class=\"punctuation\">{</span>\n  <span class=\"name other\">find</span><span class=\"punctuation\">({</span><span class=\"literal string double\">&quot;cast&quot;</span><span class=\"operator\">:</span> <span class=\"literal string double\">&quot;Meryl Streep&quot;</span><span class=\"punctuation\">}).</span><span class=\"name other\">sort</span><span class=\"punctuation\">({</span><span class=\"literal string double\">&quot;year&quot;</span><span class=\"operator\">:</span><span class=\"literal number integer\">1</span><span class=\"punctuation\">}).</span><span class=\"name other\">skip</span><span class=\"punctuation\">(</span><span class=\"literal number integer\">100</span><span class=\"punctuation\">).</span><span class=\"name other\">limit</span><span class=\"punctuation\">(</span><span class=\"literal number integer\">20</span><span class=\"punctuation\">)</span>\n<span class=\"punctuation\">}</span>\n</pre>\n<p>And the following steps for executing such query in a sharded cluster:</p>\n<blockquote>\nroute - mongos send/route the query to the shards\nlimit_by_shards - each shard limits to 100+20 docs on their partial result set\nlimit_by_mongos - mongos limits to 20 docs\nskip_by_shards - each shard skips 100 docs on their partial result set\nskip_by_mongos - mongos skips of 100 docs\nsort_by_shards - each shard sorts their partial result set\nsort_by_mongos - mongos does a merge sort on the received documents</blockquote>\n<p>Which of the following has the right steps, and in the right order?</p>\n",
+                        "bookmarked": false,
+                        "choices": [
+                            {
+                                "text": "route, sort_by_shard, skip_by_shard, limit_by_shard, sort_by_mongos, skip_by_mongos, limit_by_mongos",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "route, limit_by_shard, sort_by_mongos, limit_by_mongos, skip_by_mongos",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "route, limit_by_shard, sort_by_mongos, skip_by_mongos, limit_by_mongos",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "route, skip_by_shard, limit_by_shard, sort_by_shard, skip_by_mongos, limit_by_mongos, sort_by_mongos",
+                                "correct": false,
+                                "checked": false
+                            },
+                            {
+                                "text": "route, sort_by_shard, limit_by_shard, sort_by_mongos, skip_by_mongos, limit_by_mongos",
+                                "correct": true,
+                                "checked": false
+                            }
+                        ],
+                        "answerExplanation": "<p><strong>Correct Answer:</strong></p>\n<p><em>route, sort_by_shard, limit_by_shard, sort_by_mongos, skip_by_mongos, limit_by_mongos</em></p>\n<p>Out of all the steps, the shards are not going to skip documents, because\nskipping the first X documents only make sense on the final result set.</p>\n<p>Remember the importance of having the shards responsible to sort their set,\nbecause they likely have an index to produce the ordered set.\nThe mongos, a lighter process than the <tt class=\"docutils literal\">mongod</tt>, performs a merge sort,\nwhich is a rather inexpensive operation compare to a complete sort.</p>\n<p>The shards must limit to not only 20 documents, but also returned the\npotentially skipped documents. For this reason, they will limit to\nthe sum of the <tt class=\"docutils literal\">limit()</tt> and <tt class=\"docutils literal\">skip()</tt> values.</p>\n"
+                    }
+                ],
+                "score": 0
+            }
+        ]
+    }
+}
