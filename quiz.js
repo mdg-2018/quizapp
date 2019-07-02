@@ -13,26 +13,84 @@ function getUser(callback) {
     })
 }
 
+function recordAnswer(id,answer,callback){
+    data = {
+        "time": Date.now(),
+        "correct": answer
+    }
+    client.connect(function(err){
+        var db = client.db(config.db);
+        db.collection('exam_questions').updateOne({"_id":ObjectID(id)},{"$push":{"attempts":data}}).then((err,result) => {
+            if(err){
+                console.log(err);
+            }
+    
+            console.log(result);
+            callback();
+            client.close();
+        })
+    })
+}
+
 module.exports = {
     getNextQuestion: function (callback) {
         client.connect(function (err) {
             var db = client.db(config.db);
             getUser(function (user) {
-                var query = {};
-                if(user.quizzes[user.currentQuiz] != null){
-                    query = {
-                        "_id":{
-                            "$nin": user.quizzes[user.currentQuiz].completedQuestions
+                var pipeline = [
+                    {
+                      '$addFields': {
+                        'attempts': {
+                          '$ifNull': [
+                            '$attempts', []
+                          ]
                         }
+                      }
+                    }, {
+                      '$addFields': {
+                        'attempt_count': {
+                          '$size': '$attempts'
+                        }, 
+                        'correct_count': {
+                          '$size': {
+                            '$filter': {
+                              'input': '$attempts', 
+                              'as': 'attempt', 
+                              'cond': {
+                                '$eq': [
+                                  '$$attempt.correct', true
+                                ]
+                              }
+                            }
+                          }
+                        }, 
+                        'incorrect_count': {
+                          '$size': {
+                            '$filter': {
+                              'input': '$attempts', 
+                              'as': 'attempt', 
+                              'cond': {
+                                '$eq': [
+                                  '$$attempt.correct', false
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }, {
+                      '$sort': {
+                        'attempt_count': 1
+                      }
+                    }, {
+                      '$limit': 1
                     }
-                }
-
-                //for testing
-                //query.problemType = "multipleChoice";
-
-                db.collection('exam_questions').findOne(query, function (err, result) {
-                    callback(result);
-                    client.close();
+                  ];
+                db.collection('exam_questions').aggregate(pipeline, function (err, result) {
+                    result.toArray(function(err,docs){
+                        console.log(docs[0])
+                        callback(docs[0])
+                    })
                 });
             })
         })
@@ -66,7 +124,9 @@ module.exports = {
                     }
                 }
                 console.log(correct);
-                callback(correct);
+                recordAnswer(result._id,correct,function(){
+                    callback(correct)
+                });
             })
         })
         

@@ -10,6 +10,7 @@ function nextQuestion(){
             question.type = data.problemType;
             question._id = data._id;
             printExamQuestion(data);
+            
         })
     })
 }
@@ -33,7 +34,7 @@ function printExamQuestion(data){
         });
 
     } else if(data.problemType == "multipleChoice"){
-        instructions.innerHTML == "Choose the best answer";
+        instructions.innerHTML = "Choose the best answer";
         data.choices.forEach(choice => {
             var choiceHtml = `<input type="radio" name="response" value="${data.choices.indexOf(choice)}">${choice.text}</input><br>`;
             choices.innerHTML += choiceHtml;
@@ -44,6 +45,10 @@ function printExamQuestion(data){
 
     questionText.innerHTML = data.text;
     answer.innerHTML = data.answerExplanation;
+    if(data.attempts != null){
+        var history = "\n\nHistory" + `Correct: ${data.correct_count} Incorrect: ${data.incorrect_count}`;
+        answer.innerHTML += history;
+    }
     
 
 }
