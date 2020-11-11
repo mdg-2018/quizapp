@@ -10,7 +10,7 @@ Getting Started
 
 2. Install dependencies - <code>npm install</code>
 3. Set your mongodb connection string in <code>config.js</code>
-4. Run <code>node quiz.js quiz</code>
+4. Run <code>node index.js quiz</code>
 5. Navigate to <code>http://localhost:8081</code> and start answering questions!
 
 Notes
